@@ -20,7 +20,11 @@ jobs:
       # Don't build from a branch with the `-built` suffix, to
       # prevent endless loops of deploy scripts.
       ignore:
-        - /^.*-built$/      
+        - /^.*-built$/
+        - qa
+        - preprod
+        - master
+        - migration                   
     steps:      
       - checkout     
       - restore_cache:
