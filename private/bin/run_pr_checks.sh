@@ -2,7 +2,7 @@
 
 . ./private/bin/build_changes.sh
 
-# echo "Installing cypress"
+# echo "Installing cypresss"
 yarn cypress install
 
 # echo "Starting WP-Cypress"
