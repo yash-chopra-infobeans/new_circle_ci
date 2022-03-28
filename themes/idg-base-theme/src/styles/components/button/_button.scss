@@ -1,0 +1,28 @@
+.btn {
+  @extend %btn-base;
+  padding: 12px 27px;
+  font-size: 14px;
+  color: var(--button-primary--font-color);
+  border: $base-border-size solid var(--button-primary--border-color);
+  background-color: var(--button-primary--background-color);
+  border-radius: var(--button-primary--border-radius);
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--button-primary--hover--font-color);
+    border: $base-border-size solid var(--button-primary--hover--border-color);
+    background-color: var(--button-primary--hover--background-color);
+  }
+
+  &:visited {
+    color: var(--button-primary--visited--font-color);
+    border: $base-border-size solid var(--button-primary--visited--border-color);
+    background-color: var(--button-primary--visited--background-color);
+  }
+
+  &:enter {
+    color: var(--button-primary--enter--font-color);
+    background-color: var(--button-primary--enter--border-color);
+    border-color: var(--button-primary--enter--background-color);
+  }
+}

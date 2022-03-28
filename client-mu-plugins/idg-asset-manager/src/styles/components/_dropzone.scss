@@ -1,0 +1,45 @@
+.dropzone {
+  margin-bottom: 20px;
+  padding: 30px 45px 25px 45px;
+  border: 4px dashed #b4b9be;
+  text-align: center;
+}
+
+.dropzone.dropzone--hasErrors {
+  border-color: #cd423b;
+}
+
+.dropzoneTitle {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+}
+
+.dropzoneOr {
+  margin: 5px 0px 5px 0px;
+}
+
+.dropzone .maxUploadSize {
+  margin-top: 25px;
+}
+
+.dropzoneProgress {
+  background-color: #b4b9be;
+}
+
+.progressBackground {
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #46b450;
+  color: #fff;
+  text-align: right;
+}
+
+.dropzoneErrors {
+  color: #cd423b;
+}
+
+.dropzoneErrors li span {
+  font-weight: 500;
+}

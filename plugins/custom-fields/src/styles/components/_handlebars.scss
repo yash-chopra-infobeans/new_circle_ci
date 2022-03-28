@@ -1,0 +1,50 @@
+.cf-handlebars {
+  background: #fff;
+  border: 1px solid  $wp-grey-dark-200;
+  border-radius: 3px;
+  max-width: 100%;
+}
+
+.cf-handlebars.is-focused {
+  border: 1px solid $wp-blue;
+  box-shadow: 0 0 0 .5px $wp-blue;
+}
+
+.cf-handlebars-editor {
+  cursor: text;
+}
+
+.cf-handlebars-editor .public-DraftEditorPlaceholder-root,
+.cf-handlebars-editor .public-DraftEditor-content {
+  padding: 8px;
+}
+
+.cf-handlebars-editor .public-DraftStyleDefault-block {
+  word-break: break-all;
+}
+
+.cf-handlebars-toolbar {
+  margin: 0 8px;
+  border-bottom: 1px solid $wp-grey-light-200;
+  user-select: none;
+}
+
+.cf-handlebars-button {
+  color: $wp-grey-light-800;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 11px;
+  padding: 8px 0;
+  display: inline-block;
+}
+
+.cf-handlebars-button:hover,
+.cf-handlebars-button:focus,
+.cf-handlebars-activeButton {
+  transition: color .2s ease;
+  color: $wp-grey-dark-200;
+}
+
+.cf-handlebars-handlebar {
+  color: $wp-blue;
+}

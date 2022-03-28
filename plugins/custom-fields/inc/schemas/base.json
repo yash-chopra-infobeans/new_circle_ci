@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "required": ["sections", "field_groups"],
+  "properties": {
+    "sections": { "$ref": "#/definitions/sections" },
+    "field_groups": { "$ref": "#/definitions/field_groups" }
+  },
+  "definitions": {
+    "sections": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "title": { "type": "string" },
+          "name": { "type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$" },
+          "tabs": { "$ref": "#/definitions/tabs" }
+        },
+        "required": ["name"]
+      }
+    },
+    "tabs": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "title": { "type": "string" },
+          "name": { "type": "string", "pattern": "^\\S*$" }
+        },
+        "required": ["title", "name"]
+      }
+    },
+    "field_groups": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "title": { "type": "string" },
+          "name": { "type": "string", "pattern": "^\\S*$" },
+          "sections": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$" }
+          },
+          "fields": { "$ref": "#/definitions/fields" }
+        },
+        "required": ["name", "sections", "fields"]
+      }
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "type": {
+            "enum": []
+          },
+          "exclude_from": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "width": { "type": "integer" },
+          "validation": {
+            "type": "object",
+            "propertires": {
+              "schema": { "type": "string" },
+              "message": { "type": "string" }
+            },
+            "required": ["schema"]
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "key": { "type": "string" },
+                "operator": { "enum": [ "===", "!==", ">", "<", ">=", "<="] }
+              },
+              "required": ["key", "operator", "value"]
+            }
+          }
+        },
+        "required": ["type"],
+        "allOf": []
+      }
+    }
+  }
+}

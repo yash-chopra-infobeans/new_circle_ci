@@ -1,0 +1,21 @@
+.taxonomy-publication #addtag {
+  display: grid;
+}
+
+.taxonomy-publication .term-type-wrap {
+  order: -1;
+}
+
+.term-parent-wrap,
+.term-parent-wrap p,
+.term-slug-wrap,
+.term-description-wrap,
+.business-unit-wrapper,
+.publication-wrapper {
+  display: none;
+}
+
+.publication-wrapper.display-section,
+.business-unit-wrapper.display-section {
+  display: block;
+}

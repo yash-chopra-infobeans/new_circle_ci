@@ -1,0 +1,11 @@
+{
+  "pageLoadTimeout": 30000,
+  "wp": {
+    "version": ["5.2", "5.3.2", "5.4"],
+    "plugins": [
+      "./cypress-plugin",
+      "./"
+    ],
+    "themes": []
+  }
+}

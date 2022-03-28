@@ -1,0 +1,108 @@
+.post-legacy {
+
+  .credit {
+    float: right;
+    font-size: .625rem;
+    line-height: .75rem;
+    margin-top: -.7rem;
+    padding: 0 4px;
+    position: relative;
+    background-color: rgba(255, 255, 255, .8);
+    color: #222 !important;
+    display: block;
+    width: auto;
+  }
+
+  figcaption {
+    overflow: hidden;
+    margin: .25rem 0 .5rem;
+    max-width: 620px;
+    clear: left;
+    padding-top: .3rem;
+    font-size: .9rem;
+    line-height: 1rem;
+  }
+
+  figure.large {
+    margin: 0 0 16px 0;
+    padding: 0;
+    max-width: 620px;
+    width: auto;
+    display: block;
+    float: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  figure.medium {
+    max-width: 300px;
+    width: auto;
+    float: none;
+    margin: 0 auto 1rem auto;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .credit a {
+      color: #222 !important;
+    }
+
+    img {
+      max-width: 375px;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    figcaption {
+      font-size: .9375rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  figure.medium.right {
+    float: right;
+    margin-right: 0;
+    margin-left: 1rem;
+    max-width: 300px;
+    display: block;
+  }
+
+  figure.small {
+    margin: .5rem 1.5rem 1rem 0;
+    width: 40%;
+    float: left;
+    display: block;
+    max-width: 150px;
+
+    img {
+      width: 100%;
+      height: auto;
+      float: left;
+      margin-bottom: 0;
+    }
+
+    .credit {
+      float: left;
+      padding: 0;
+      margin-top: 0;
+      background-color: transparent;
+      font-size: .625rem;
+      line-height: .75rem;
+      position: relative;
+    }
+
+    figcaption {
+      color: #666;
+      font-size: .9375rem;
+      line-height: 1.25rem;
+      display: block;
+      padding-right: 5px !important;
+    }
+  }
+
+  figure.small.right {
+    float: right;
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+}

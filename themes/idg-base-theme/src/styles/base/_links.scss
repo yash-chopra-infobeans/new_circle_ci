@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+  color: var(--text-link--font-color);
+  transition: color .3s ease-in-out;
+}
+
+a:hover {
+  color: var(--text-link--hover--font-color);
+}
+
+a:active {
+  color: var(--text-link--active--font-color);
+}
+
+a:visited {
+  color: var(--text-link--visited--font-color);
+}

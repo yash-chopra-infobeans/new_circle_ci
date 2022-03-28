@@ -1,0 +1,68 @@
+{
+  "sections": [
+    {
+      "title": "Sponsored Link",
+      "name": "sponsored_link_campaign"
+    }
+  ],
+  "field_groups": [
+    {
+      "title": "Campaign General Details",
+      "name": "campaign_details",
+      "sections": ["sponsored_link_campaign"],
+      "fields":  [
+        {
+          "title": "Enable",
+          "key": "enable",
+          "type": "toggle",
+          "width": 100
+        },
+        {
+          "title": "Title",
+          "key": "link_text",
+          "type": "text",
+          "width": 100,
+          "validation": ["\\Custom_Fields\\Validation_Helpers", "required"]
+        },
+        {
+          "title": "Click URL",
+          "key": "click_url",
+          "type": "text",
+          "width": 100,
+          "validation": ["\\Custom_Fields\\Validation_Helpers", "uri"]
+        },
+        {
+          "title": "Impression Pixel Tag",
+          "key": "impression_pixel_tag",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Notes",
+          "key": "notes",
+          "type": "textarea",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Campaign Duration Details",
+      "name": "campaign_duration_details",
+      "sections": ["sponsored_link_campaign"],
+      "fields":  [
+        {
+          "title": "Start Date",
+          "key": "start_date",
+          "type": "date",
+          "width": 100
+        },
+        {
+          "title": "End Date",
+          "key": "end_date",
+          "type": "date",
+          "width": 100
+        }
+      ]
+    }
+  ]
+}

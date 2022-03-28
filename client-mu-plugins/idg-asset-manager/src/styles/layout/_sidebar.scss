@@ -1,0 +1,18 @@
+.assetData-sidebar .components-panel + .components-panel {
+  margin-top: 20px;
+}
+
+.searchSidebar .searchSidebar-content > .components-panel + .components-panel {
+  margin-top: 20px;
+}
+
+.searchSidebar .searchSidebar-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eaebeb;
+  margin-bottom: 20px;
+}
+
+.searchSidebar .searchSidebar-header .assetManager-heading {
+  flex: 1 1 auto;
+}

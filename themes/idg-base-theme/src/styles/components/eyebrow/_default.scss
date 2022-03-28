@@ -1,0 +1,21 @@
+.entry-eyebrow--default,
+.item-eyebrow--default {
+  @extend %eyebrow;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--eyebrow--default--font-color);
+  font-family: var(--eyebrow--default--font-family);
+  font-weight: var(--eyebrow--default--font-weight);
+  letter-spacing: var(--eyebrow--default--letter-spacing);
+}
+
+.hero .item-eyebrow--default {
+  padding: 5px 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--hero-eyebrow--default--font-color);
+  font-family: var(--hero-eyebrow--default--font-family);
+  font-weight: var(--hero-eyebrow--default--font-weight);
+  letter-spacing: var(--hero-eyebrow--default--letter-spacing);
+  background-color: var(--hero-eyebrow--default--background-color);
+}

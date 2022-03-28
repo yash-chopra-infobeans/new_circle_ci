@@ -1,0 +1,14 @@
+{
+  "name": "idg/taxonomy-meta-fields",
+  "description": "Custom taxonomy meta fields for IDG.",
+  "autoload": {
+    "psr-4": {
+      "IDG\\Base_Theme\\Taxonomy\\": "field-types/"
+    },
+    "classmap": [ "field-types/" ]
+  },
+  "scripts": {},
+  "config": {
+    "preferred-install": "dist"
+  }
+}

@@ -1,0 +1,23 @@
+body.toplevel_page_asset-manager {
+  background: #fff;
+}
+
+#assetManager-container {
+  margin-right: 20px;
+}
+
+.assetManager-wrapper {
+  display: flex;
+}
+
+.assetManager-sidebar {
+  min-width: 20%;
+}
+
+.assetManager-main {
+  width: 100%;
+}
+
+.assetManager-main > .files {
+  width: 100%;
+}

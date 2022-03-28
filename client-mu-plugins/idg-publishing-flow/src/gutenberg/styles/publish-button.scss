@@ -1,0 +1,17 @@
+.editor-post-publish-button--unpublish {
+  display: none !important;
+}
+
+.publishing-flow__publish-button--unpublish {
+  border: 1px solid red !important;
+  background-color: red !important;
+}
+
+.publishing-flow__publish-button--change {
+  font-size: 0 !important;
+
+  &::after {
+    content: "Publish Changes" !important;
+    font-size: 13px !important;
+  }
+}

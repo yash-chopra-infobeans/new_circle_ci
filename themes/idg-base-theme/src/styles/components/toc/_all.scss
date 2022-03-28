@@ -1,0 +1,122 @@
+.toc-wrapper {
+  margin: auto;
+  font-family: var(--base--font-family);
+  font-size: 15px;
+  border: 1px solid #e8e8e8;
+  border-top: 4px solid #39c;
+  padding: 10px 20px 10px 0;
+  line-height: 20px;
+  letter-spacing: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .15);
+  z-index: 1;
+
+  @media only screen and (min-width: 1600px) {
+    border: none;
+    margin-top: 0;
+    margin-left: -2rem;
+    width: 14rem;
+    position: absolute;
+    left: -175px;
+    height: 100%;
+    font-size: 13px;
+    box-shadow: none;
+  }
+}
+
+.toc-wrapper.hidden {
+  @media only screen and (min-width: 1600px) {
+    display: none;
+  }
+}
+
+.toc-wrapper ul {
+  margin: 20px;
+  max-height: 100vh;
+  position: sticky;
+  overflow-y: auto;
+  list-style: none;
+  top: 140px;
+}
+
+.toc-wrapper li {
+  margin-bottom: 0 !important;
+}
+
+.toc-title {
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 0  0 15px 0;
+
+  @include mq("tablet") {
+    font-size: 18px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: 14px;
+  }
+}
+
+li.toc-item {
+  display: none;
+
+  @include mq("tablet") {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    display: block;
+    border-left: 3px solid #e8e8e8;
+    padding-left: 5px;
+  }
+}
+
+.toc-item a {
+
+  display: block;
+  padding: 15px 0;
+  color: black;
+
+  @include mq("tablet") {
+    padding: 10px;
+  }
+}
+
+.toc-item:hover {
+  @include mq("tablet") {
+    background-color: #e5f2fa;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    border-left: 3px solid #39c;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+.toc-item.is-open {
+  display: block;
+
+}
+
+.toc-show-more {
+  font-size: 30px;
+
+  @include mq("tablet") {
+    padding-left: 10px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    display: none;
+
+  }
+}
+
+.toc-show-more:hover {
+  cursor: pointer;
+}
+
+.toc-show-more.hidden {
+  display: none;
+}

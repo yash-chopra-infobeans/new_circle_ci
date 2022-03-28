@@ -1,0 +1,247 @@
+[
+  {
+    "type": "text",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        }
+      },
+      "required": [
+        "title",
+        "key"
+      ]
+    }
+  },
+  {
+    "type": "textarea",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        }
+      },
+      "required": [
+        "title",
+        "key"
+      ]
+    }
+  },
+  {
+    "type": "number",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        }
+      },
+      "required": [
+        "title",
+        "key"
+      ]
+    }
+  },
+  {
+    "type": "richtext",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        },
+        "disabled_features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "handlebar_variables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "single_line": {
+          "type": "boolean"
+        },
+        "plain_text": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "key"
+      ]
+    }
+  },
+  {
+    "type": "handlebars",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "key"
+      ]
+    }
+  },
+  {
+    "type": "toggle",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        }
+      },
+      "required": [
+        "title",
+        "key"
+      ]
+    }
+  },
+  {
+    "type": "select",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ]
+          }
+        },
+        "default": {
+          "type": "string"
+        },
+        "default_tabs": {
+          "type": "object",
+          "patternProperties": {
+            "^.*$": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "title",
+        "key",
+        "options"
+      ]
+    }
+  },
+  {
+    "type": "repeater",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "singular": {
+          "type": "string"
+        },
+        "plural": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        },
+        "fields": {
+          "$ref": "#/definitions/fields"
+        },
+        "panel": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "title_keys": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        }
+      },
+      "required": [
+        "singular",
+        "plural",
+        "key",
+        "fields"
+      ]
+    }
+  },
+  {
+    "type": "image",
+    "schema": {
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^\\S*$"
+        }
+      },
+      "required": [
+        "title",
+        "key"
+      ]
+    }
+  }
+]

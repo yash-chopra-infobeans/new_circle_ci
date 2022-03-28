@@ -1,0 +1,76 @@
+.wp-block-table, .wp-block-table.is-style-stripes {
+
+  font-size: 18px;
+  line-height: 24px;
+  color: #111;
+  overflow-x: auto;
+  margin-bottom: 40px;
+
+  background-image: linear-gradient(to right, white, white),
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, rgba(0, 0, 20, .25), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, rgba(0, 0, 20, .25), rgba(255, 255, 255, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  background-attachment: local, local, scroll, scroll;
+
+  table {
+    margin-bottom: 10px;
+    border-spacing: 0;
+    border-radius: 3px;
+    border: 1px solid #878787;
+
+  }
+
+  th {
+    text-align: left;
+  }
+
+  th, td {
+    min-width: 140px;
+    padding: 7px 8.5px;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+
+  }
+
+  td:first-of-type {
+    font-weight: bold;
+  }
+
+  th:last-of-type, td:last-of-type {
+    border-right: none;
+  }
+
+  tr:last-of-type > td {
+    border-bottom: none;
+  }
+
+  figcaption {
+    line-height: 24px;
+    font-size: 16px;
+    color: #4d4d4d;
+  }
+}
+
+.wp-block-table.is-style-stripes {
+
+  th, td {
+    border-right: none;
+  }
+
+  thead tr {
+    background-color: #3499cb;
+    color: white;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: unset;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, .075);
+  }
+    
+}

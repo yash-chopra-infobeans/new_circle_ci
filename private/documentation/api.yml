@@ -1,0 +1,141 @@
+openapi: 3.0.1
+info:
+  title: IDG
+  description: This is for IDG WordPress project
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: paul@bigbite.net
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://bigbite.net/wp-json/v1
+  - url: http://bigbite.net/wp-json/v1
+tags:
+  - name: "Publishing Flow"
+    description: endpoints for publishing articles.
+    externalDocs:
+      description: Find out more about our store
+      url: http://swagger.io
+paths:
+  /publishing/post:
+    description: "For the publishing flow"
+    put:
+      tags:
+        - "Publishing Flow"
+      summary: Create a new post
+      operationId: update_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/postPUT'
+                - $ref: '#/components/schemas/postPOST'
+        required: true
+      responses:
+        200:
+          description: Stored succesfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/postResponse200'
+        400:
+          description: Invalid input.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/postResponse400'
+    post:
+      tags:
+      - "Publishing Flow"
+      summary: Create a new post
+      operationId: create_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/postPOST'
+        required: true
+      responses:
+        200:
+          description: Stored succesfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/postResponse200'
+        400:
+          description: Invalid input.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/postResponse400'
+components:
+  schemas:
+    postPOST:
+      type: object
+      properties:
+        authors:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
+            required:
+              - name
+              - email
+
+        title:
+          type: string
+        content:
+          type: string
+        meta:
+          type: object
+          properties: {}
+      required:
+        - authors
+        - title
+        - content
+    postPUT:
+      type: object
+      properties:
+        post_id:
+          type: integer
+          example: 123
+      required:
+        - post_id
+    postResponse200:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        data:
+          type: object
+          description: A list of the expected payload properties.
+          properties:
+            post_id:
+              type: string
+              example: 123
+            permalink:
+              type: string
+              example: http://example.com/my-fresh-article
+    postResponse400:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 400
+        errors:
+          type: object
+          description: A list of the expected payload properties.
+          properties:
+            content:
+              type: array
+              items:
+                type: string
+                example: The content field is required

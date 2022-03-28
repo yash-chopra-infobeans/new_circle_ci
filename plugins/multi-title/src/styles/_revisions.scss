@@ -1,0 +1,16 @@
+.is-revision {
+  *[data-type="bigbite/multi-title"] .editor-post-title {
+    display: block;
+  }
+
+  *[data-type="bigbite/revision-del"] [data-type="bigbite/multi-title"] .editor-block-list__block-edit,
+  *[data-type="bigbite/revision-ins"] [data-type="bigbite/multi-title"] .editor-block-list__block-edit {
+    padding: 15px 0;
+  }
+
+  [data-type="bigbite/multi-title"] .wp-block,
+  [data-type="bigbite/multi-title"] .editor-block-list__block-edit div {
+    margin: 0;
+    padding: 0 !important;
+  }
+}

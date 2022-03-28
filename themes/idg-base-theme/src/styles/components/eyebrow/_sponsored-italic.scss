@@ -1,0 +1,25 @@
+.entry-eyebrow--sponsored-italic,
+.item-eyebrow--sponsored-italic {
+  @extend %eyebrow;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--eyebrow--sponsered--content--font-color);
+  font-family: var(--eyebrow--sponsered--font-family);
+  font-weight: var(--eyebrow--sponsered--font-weight);
+  letter-spacing: var(--eyebrow--sponsered--letter-spacing);
+}
+
+.ntv-item .item-eyebrow--sponsored-italic {
+  color: var(--eyebrow--sponsered--content--font-color);
+}
+
+.hero .item-eyebrow--sponsored-italic {
+  padding: 5px 12px;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--hero-eyebrow--default--font-color);
+  font-family: var(--hero-eyebrow--default--font-family);
+  font-weight: var(--hero-eyebrow--default--font-weight);
+  letter-spacing: var(--hero-eyebrow--default--letter-spacing);
+  background-color: var(--hero-eyebrow--default--background-color);
+}

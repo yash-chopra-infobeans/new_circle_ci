@@ -1,0 +1,11 @@
+.newsletter-wrapper {
+  p.preferences-description {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    margin-top: 40px;
+    a {
+      box-shadow: inset 0 -1px #fff, inset 0 -2px var(--text-link--font-color);
+      color: var(--text-link--font-color);
+    }
+  }
+}

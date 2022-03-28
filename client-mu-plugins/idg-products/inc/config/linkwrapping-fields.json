@@ -1,0 +1,153 @@
+{
+  "sections": [
+    {
+      "title": "Subtag",
+      "name": "subtag"
+    },
+    {
+      "title": "Rules",
+      "name": "rules"
+    }
+  ],
+  "field_groups": [
+    {
+      "title": "Site",
+      "name": "site",
+      "sections": [
+        "subtag"
+      ],
+      "fields": [
+        {
+          "title": "ID",
+          "key": "id",
+          "type": "number",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Default",
+      "name": "default",
+      "sections": [
+        "rules"
+      ],
+      "fields": [
+        {
+          "title": "Transform",
+          "key": "transform",
+          "variables": [
+            "target_url",
+            "subtag",
+            "origin_url"
+          ],
+          "type": "handlebars",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Block List",
+      "name": "blocklist",
+      "sections": [
+        "rules"
+      ],
+      "fields": [
+        {
+          "singular": "Target",
+          "plural": "Targets",
+          "key": "urls",
+          "type": "repeater",
+          "panel": {
+            "title_keys": [
+              "url"
+            ]
+          },
+          "fields": [
+            {
+              "title": "Target",
+              "key": "url",
+              "type": "text",
+              "help": "To use regex, wrap the target using # as delimeters.",
+              "validation": [
+                "\\Custom_Fields\\Validation_Helpers",
+                "required"
+              ],
+              "width": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Custom",
+      "name": "custom",
+      "sections": [
+        "rules"
+      ],
+      "fields": [
+        {
+          "singular": "Target",
+          "plural": "Targets",
+          "key": "targets",
+          "type": "repeater",
+          "panel": {
+            "title_keys": [
+              "target"
+            ]
+          },
+          "fields": [
+            {
+              "title": "Target",
+              "key": "target",
+              "type": "text",
+              "validation": [
+                "\\Custom_Fields\\Validation_Helpers",
+                "required"
+              ],
+              "help": "To use regex, wrap the target using # as delimeters.",
+              "width": 100
+            },
+            {
+              "singular": "Rule",
+              "plural": "Rules",
+              "key": "rules",
+              "type": "repeater",
+              "panel": {
+                "title_keys": [
+                  "territory"
+                ]
+              },
+              "fields": [
+                {
+                  "title": "Territory",
+                  "key": "territory",
+                  "type": "select",
+                  "options": [
+                    "\\IDG\\Territories\\Helpers",
+                    "get_territory_options"
+                  ],
+                  "width": 100
+                },
+                {
+                  "title": "Transform",
+                  "key": "transform",
+                  "variables": [
+                    "target_url",
+                    "subtag",
+                    "origin_url"
+                  ],
+                  "type": "handlebars",
+                  "width": 100,
+                  "validation": [
+                    "\\Custom_Fields\\Validation_Helpers",
+                    "required"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

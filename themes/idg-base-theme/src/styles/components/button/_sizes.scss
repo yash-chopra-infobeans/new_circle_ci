@@ -1,0 +1,9 @@
+.btn--small {
+  font-size: $milli-size;
+  padding: spacing(quarter) spacing(half);
+}
+
+.btn--large {
+  font-size: map-get($header-sizes, h6);
+  padding: spacing() spacing(double);
+}

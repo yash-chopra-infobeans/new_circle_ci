@@ -1,0 +1,31 @@
+// This file uses spacing to align, disable disalowing more than 1 space after colon.
+/* stylelint-disable declaration-colon-space-after */
+
+$mq-breakpoints: (
+  mobile-min:      0px,
+  // MOBILE HERE.
+  mobile:          740px,
+  // MOBILE WIDE HERE.
+  mobile-wide:     1024px,
+  // TABLET HERE.
+  tablet:          1208px,
+  // DESKTOP HERE.
+  desktop:         1440px,
+  // DESKTOP LARGE HERE.
+  desktop-large:   1440px,
+  // BIGGER THAN THAT
+
+  // Tweakpoints
+  wp-admin:      783px,
+  desktop-small: 1024px,
+);
+
+/*
+Breakpoint Structure.
+
+Small (mobile): 0px - 739px.
+Medium (mobile-wide): 740px - 1023px.
+Large (tablet): 1024px - 1207px.
+Extra Large (desktop): 1208px - 1439px.
+Extra Extra Large (desktop-large): 1440px or larger.
+*/

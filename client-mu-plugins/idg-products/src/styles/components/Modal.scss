@@ -1,0 +1,122 @@
+.productModal {
+  width: 100%;
+  height: 100%;
+}
+
+.productModal-overlay {
+  // To trump popover component.
+  z-index: 1000001;
+}
+
+.productModal .components-base-control .components-base-control__help {
+  margin-top: 0;
+}
+
+.productModal-layout {
+  display: flex;
+  align-items: flex-start;
+
+  @include mq($until: tablet) {
+    flex-wrap: wrap;
+  }
+}
+
+.productModal-main {
+  min-height: 200px;
+  height: 100%;
+  position: sticky;
+  top: 84px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  @include mq($until: tablet) {
+    order: 2;
+    position: static;
+    width: 100%;
+  }
+}
+
+.productModal-sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: sticky;
+  height: 100%;
+  top: 84px;
+  width: 30%;
+  margin-left: 20px;
+
+  @include mq($until: tablet) {
+    order: 1;
+    position: static;
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+.productModal-main .productPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.productModal-footer {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 -2.5px 2px -3px $wp-grey-light-800;
+  background: #fff;
+  margin: auto 0 0;
+}
+
+.productModal-footer--center {
+  justify-content: center;
+}
+
+.productModal-pagination > li {
+  border-radius: 2px;
+  margin-bottom: 0;
+}
+
+.productModal-pagination > li a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 400;
+  padding: 6px 12px;
+  color: $wp-grey-dark-500;
+  font-size: 13px;
+  font-family: $font-system-ui;
+}
+
+.productModal-pagination .disabled {
+  cursor: not-allowed;
+}
+
+.productModal-pagination .disabled a {
+  color: $wp-grey-light-800;
+}
+
+.productModal-pagination > .active {
+  background-color: $wp-blue;
+}
+
+.productModal-pagination > .active a {
+  color: #fff;
+}
+
+.productModal-pagination .next {
+  margin-left: 10px;
+}
+
+.productModal-pagination .previous {
+  margin-right: 10px;
+}
+.product-review-select-btn {
+  width: 75px;
+  justify-content: center;
+}

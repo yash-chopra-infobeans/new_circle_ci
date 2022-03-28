@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WrappedInput class should render error in UI 1`] = `
+<div
+  className="wrappedInput"
+>
+  <CharLimit
+    charLimit={false}
+    charLimitValue=""
+    showCharLimitAt={-1}
+  />
+  <div
+    className="wrappedInput-input"
+  >
+    <ForwardRef
+      name="undefined-additional"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      rows={1}
+      value=""
+    />
+  </div>
+  <div
+    className="wrappedInput-errors"
+  >
+    <ul>
+      <li>
+        You have exceeded the maximum character limit.
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`WrappedInput class should render without errors 1`] = `
+<div
+  className="wrappedInput"
+>
+  <CharLimit
+    charLimit={false}
+    charLimitValue=""
+    showCharLimitAt={-1}
+  />
+  <div
+    className="wrappedInput-input"
+  >
+    <ForwardRef
+      name="undefined-additional"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      rows={1}
+      value=""
+    />
+  </div>
+</div>
+`;

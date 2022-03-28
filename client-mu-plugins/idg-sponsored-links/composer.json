@@ -1,0 +1,24 @@
+{
+  "name": "idg/sponsored_links",
+  "description": "The sponsored links plugin for IDG.",
+  "type": "wordpress-client-muplugin",
+  "version": "1.0.0-alpha.1",
+  "require": {},
+  "require-dev": {
+    "automattic/jetpack-autoloader": "^1"
+  },
+  "autoload": {
+    "files": [
+      "inc/setup.php",
+      "inc/asset-settings.php"
+    ],
+    "psr-4": {
+      "IDG\\Sponsored_Links\\": "inc/"
+    },
+    "classmap": [ "inc/" ]
+  },
+  "scripts": {},
+  "config": {
+    "preferred-install": "dist"
+  }
+}

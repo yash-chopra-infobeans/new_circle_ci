@@ -1,0 +1,3 @@
+data_sync:
+  domain_map:
+    macworld.go-vip.net: macworld-migration.go-vip.net

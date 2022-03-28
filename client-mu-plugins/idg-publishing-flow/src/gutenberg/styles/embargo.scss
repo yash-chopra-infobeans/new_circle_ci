@@ -1,0 +1,19 @@
+.edit-post-post-embargo {
+  width: 100%;
+  position: relative;
+  justify-content: left;
+}
+
+.edit-post-post-embargo span {
+  display: block;
+  width: 45%;
+}
+
+.publication-flow__embargo--message {
+  display: table-header-group;
+  padding: 0;
+
+  .check-publish {
+    margin-top: 10px;
+  }
+}

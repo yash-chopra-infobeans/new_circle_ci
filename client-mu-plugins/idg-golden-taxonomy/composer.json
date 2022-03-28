@@ -1,0 +1,26 @@
+{
+  "name": "idg/golden-taxonomy",
+  "description": "The plugin to sync golden taxonomies.",
+  "type": "wordpress-client-muplugin",
+  "version": "1.0.0",
+  "require": {},
+  "require-dev": {
+    "automattic/jetpack-autoloader": "^1"
+  },
+  "autoload": {
+    "files": [
+      "inc/asset-settings.php",
+      "inc/setup.php",
+      "inc/functions.php",
+      "inc/utils.php"
+    ],
+    "psr-4": {
+      "IDG\\": "inc/"
+    },
+    "classmap": [ "inc/" ]
+  },
+  "scripts": {},
+  "config": {
+      "preferred-install": "dist"
+  }
+}

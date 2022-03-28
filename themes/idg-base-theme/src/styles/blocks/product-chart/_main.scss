@@ -1,0 +1,212 @@
+.product-chart-item {
+  overflow: auto;
+  margin-bottom: 1.5rem;
+
+  .product-chart-item__title-wrapper {
+    font-family: var(--product-chart--title--font-family);
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    .product-chart-item__title-wrapper--title { // Need higher specificity.
+      margin: 1.75rem 0 1.5rem 0;
+    }
+
+    .product-chart-item__title-wrapper--rank {
+      display: none;
+      margin: 1.75rem 0 1.5rem 0;
+    }
+  }
+
+  &__image-outer-wrapper {
+    float: right;
+    margin: 0 0 15px 20px;
+    height: auto;
+    overflow: hidden;
+
+    &--small {
+      max-width: 225px;
+      margin-bottom: 0;
+    }
+
+    &--medium {
+      max-width: 318px;
+    }
+
+    &--large {
+      float: unset;
+      width: 100%;
+      margin: 0 0 12px 0;
+    }
+
+    @include mq($until: mobile) {
+      float: unset;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: .75rem;
+      max-width: 300px;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .product-chart-item__image {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__review-details {
+    display: flex;
+    padding: 0;
+    border: 0;
+    margin: 0 0 20px 0;
+
+    .product-chart-item__review-details--editors-choice-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      object-position: center;
+      margin-right: 10px;
+    }
+
+    .product-chart__review-details--editors-choice-placeholder {
+      color: var(--product-widget--block-title--background-color);
+      font-size: 14px;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    &--rating {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: none;
+      margin: 0;
+
+      .review-subTitle {
+        display: none;
+      }
+
+      .starRating {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__information {
+    font-family: var(--product-chart--information-label--font-family);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+
+    &--rrp-wrapper {
+      margin-bottom: 5px;
+    }
+
+    &--rrp-label {
+      font-family: inherit;
+      font-weight: bold;
+    }
+
+    &--rrp-value {
+      font-family: inherit;
+    }
+  }
+
+  &__pricing-details {
+    font-family: var(--product-chart--information-label--font-family);
+    font-size: 1rem;
+
+    &--label {
+      font-family: inherit;
+      font-weight: bold;
+    }
+
+    &--link {
+      font-family: inherit;
+      color: var(--product-chart--information-value--font-color);
+    }
+  }
+
+  &__review-link {
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--product-chart--review-link--font-color);
+    text-align: left;
+  }
+
+}
+
+.wp-block-product-chart {
+  margin-bottom: 2.5rem;
+
+  &.is-showing-rank .product-chart-item__title-wrapper--rank {
+    display: inline;
+  }
+
+  .product-chart-separator {
+    height: 8px;
+    background: var(--product-chart--separator--background-color);
+  }
+}
+
+.product-chart-item__pricing-details.amp-product-chart-item,
+.product-widget__pricing-details.amp-product-chart-item {
+  .product-chart-item__pricing-details--label, .product-widget__pricing-details--label {
+    float: left;
+  }
+
+  span.amp-bar {
+    font-size: larger;
+  }
+
+  amp-list a {
+    margin: 3px;
+  }
+}
+
+amp-list div[placeholder] .placeholder-section {
+  margin-left: -121px;
+  height: 50px;
+  background-image: radial-gradient(circle 50px at 50px 50px, transparent 99%, transparent 0), linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 80%), linear-gradient(lightgray 20px, transparent 0);
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 120px 0, 120px 40px, 120px 80px, 120px 120px;
+  animation: shine 2s infinite;
+
+  @keyframes shine {
+    to {
+      background-position:
+        0 0,
+        100% 0,
+        120px 0,
+        120px 40px,
+        120px 80px,
+        120px 120px;
+    }
+  }
+}
+
+amp-list {
+  div[placeholder] {
+    .placeholder-section.small {
+      background-size: 50px 200px, 150px 200px, 160px 200px;
+    }
+    .placeholder-section.large {
+      background-size: 50px 200px, 150px 200px, 600px 200px;
+    }
+    .placeholder-section.medium {
+      background-size: 50px 200px, 150px 200px, 300px 200px;
+    }
+  }
+}
+.placeholder-row {
+  width: 100%;
+  float: left;
+  margin: 10px 0 0 1%;
+  .placeholder-section.small {
+    float: left;
+    width: 44%;
+    margin-right: 1%;
+  }
+}

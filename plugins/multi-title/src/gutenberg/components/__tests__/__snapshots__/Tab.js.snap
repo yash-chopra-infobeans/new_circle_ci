@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tab /> should render additionalFields when passed as function 1`] = `
+<div
+  className="editor-post-title tabbed-title display"
+>
+  <div
+    className="wp-block editor-post-title__block"
+  >
+    <ForwardRef(withForwardedRef(WrappedInput))
+      className="title-PrefixInput title-PrefixInput-headline"
+      name="headline"
+      placeholder="Kicker"
+      showCharLimitAt={0}
+      showCharLimitOnFocus={true}
+      titleType="prefix"
+    />
+    <ForwardRef(withForwardedRef(WrappedInput))
+      className="title-input title-input-headline title-input--main"
+      name="headline"
+      showCharLimitAt={0}
+      showCharLimitOnFocus={true}
+      title="Headline 2"
+      titleType="value"
+    />
+    <p>
+      test additional field render
+    </p>
+    <Slot
+      name="multi-title-tab-headline"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Tab /> should render additionalFields when passed as object 1`] = `
+<div
+  className="editor-post-title tabbed-title display"
+>
+  <div
+    className="wp-block editor-post-title__block"
+  >
+    <ForwardRef(withForwardedRef(WrappedInput))
+      className="title-PrefixInput title-PrefixInput-headline"
+      name="headline"
+      placeholder="Kicker"
+      showCharLimitAt={0}
+      showCharLimitOnFocus={true}
+      titleType="prefix"
+    />
+    <ForwardRef(withForwardedRef(WrappedInput))
+      className="title-input title-input-headline title-input--main"
+      name="headline"
+      showCharLimitAt={0}
+      showCharLimitOnFocus={true}
+      title="Headline 2"
+      titleType="value"
+    />
+    <p>
+      test additional field render
+    </p>
+    <Slot
+      name="multi-title-tab-headline"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Tab /> should render without additionalFields 1`] = `
+<div
+  className="editor-post-title tabbed-title display"
+>
+  <div
+    className="wp-block editor-post-title__block"
+  >
+    <ForwardRef(withForwardedRef(WrappedInput))
+      className="title-PrefixInput title-PrefixInput-headline"
+      name="headline"
+      placeholder="Kicker"
+      showCharLimitAt={0}
+      showCharLimitOnFocus={true}
+      titleType="prefix"
+    />
+    <ForwardRef(withForwardedRef(WrappedInput))
+      className="title-input title-input-headline title-input--main"
+      name="headline"
+      showCharLimitAt={0}
+      showCharLimitOnFocus={true}
+      title="Headline 2"
+      titleType="value"
+    />
+    <Slot
+      name="multi-title-tab-headline"
+    />
+  </div>
+</div>
+`;

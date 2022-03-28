@@ -1,0 +1,18 @@
+.sponsored-links {
+
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid var(--sponsored-links--border-color);
+
+  &__title {
+    color: var(--sponsored-links-title--font-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    list-style: none;
+    margin-left: 0;
+  }
+}

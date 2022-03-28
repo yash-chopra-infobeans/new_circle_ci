@@ -1,0 +1,60 @@
+.post-legacy {
+
+  .bar_graph {
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    background-image: url(../../static/img/legacy-charts/dots-for-chart.png);
+    background-repeat: repeat-x;
+  }
+
+  .graph_title {
+    padding: 1.2rem 0 0;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: #000;
+    margin: 0;
+  }
+
+  .graph_desc {
+    font-size: 1rem;
+    line-height: 1.45rem;
+    color: #7f7f7f;
+    margin: .6rem 0 1.2rem 0 !important;
+  }
+
+  .bar_text {
+    padding-bottom: 8px;
+
+  }
+
+  .bar {
+    height: 24px;
+    display: block;
+    background: linear-gradient(to bottom, #b92132 0%, #a61f2e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b92132", endColorstr="#a61f2e", GradientType=0);
+    margin-bottom: 18px;
+    color: #fff;
+    text-align: right;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px #000;
+    -webkit-text-shadow: 1px 1px 1px #000;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    padding: 2px 3px 1px 3px;
+    min-width: 22px;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  figcaption {
+    margin: .25rem 0 .5rem;
+    overflow: hidden;
+    max-width: 620px;
+    clear: left;
+    padding-top: .3rem;
+    font-size: .9rem;
+    line-height: 1rem;
+    display: block;
+  }
+}

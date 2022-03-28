@@ -1,0 +1,148 @@
+{
+  "sections": [{
+    "title": "Region Specific Info",
+    "name": "region_info",
+    "tabs": ["\\IDG\\Territories\\Helpers", "get_territory_tabs"]
+  },
+  {
+    "title": "Global Product Info",
+    "name": "global_info"
+  }],
+  "field_groups": [{
+    "title": "Product Info",
+    "name": "product_info",
+    "sections": ["global_info"],
+    "fields": [{
+      "title": "Append manufacturer to product name?",
+      "key": "append_manufacturer",
+      "type": "toggle",
+      "width": 100
+    }]
+  },{
+    "title": "Additional purchase links (global or local)",
+    "name": "purchase_options",
+    "sections": ["global_info"],
+    "fields": [
+      {
+      "className":"custom-product-body", 
+      "help" : "Add direct links to where to purchase here, along with which region that link is for (or global) and the price.", 
+      "singular": "Vendor Link",
+      "plural": "Vendor Links",
+      "key": "vendor_links",
+      "type": "repeater",
+      "panel": {
+        "title_keys": ["vendor", "territory"]
+      },
+      "fields": [{
+        "title": "Vendor",
+        "key": "vendor",
+        "type": "text",
+        "width": 100,
+        "validation": ["\\Custom_Fields\\Validation_Helpers", "required"]
+      },
+      {
+        "title": "Territory",
+        "key": "territory",
+        "type": "select",
+        "options": ["\\IDG\\Territories\\Helpers", "get_territory_options"]
+      },
+      {
+        "title": "Seller URL",
+        "key": "url",
+        "width": 100,
+        "type": "text",
+        "validation": ["\\Custom_Fields\\Validation_Helpers", "uri"]
+      },
+      {
+        "title": "Currency",
+        "key": "currency",
+        "type": "select",
+        "width": 100,
+        "options": ["\\IDG\\Territories\\Helpers", "get_currency_options"]
+      },
+      {
+        "title": "Price",
+        "key": "price",
+        "type": "number",
+        "width": 72,
+        "validation": ["\\Custom_Fields\\Validation_Helpers", "required"]
+      }]
+    }]
+  },
+  {
+    "title": "Product Info",
+    "name": "product_info",
+    "sections": ["region_info"],
+    "fields": [{
+      "title": "Territory-specific product name (if different from above)",
+      "key": "name",
+      "type": "text",
+      "width": 100
+    }]
+  },
+  {
+    "title": "Pricing",
+    "name": "pricing",
+    "sections": ["region_info"],
+    "fields": [{
+      "title": "Price When Reviewed",
+      "help" : "This is a text description of a product's pricing in this region, eg Base price £999. Model reviewed £1,499. Please use editorially agreed conventions.",
+      "key": "price_options",
+      "type": "text",
+      "width": 100
+      },
+      {
+      "title": "Currency",
+      "key": "currency",
+      "type": "select",
+      "width": 100,
+      "default_tabs": ["\\IDG\\Territories\\Helpers", "get_currency_for_region"],
+      "options": ["\\IDG\\Territories\\Helpers", "get_currency_options"]
+    },
+    {
+      "title": "Base Price",
+      "key": "price",
+      "type": "number"
+    }]
+  },
+  {
+    "title": "Product Codes",
+    "name": "purchase_options",
+    "sections": ["region_info"],
+    "fields": [{
+      "className":"custom-product-body-with-helper", 
+      "addBtn": "Product Code Type",
+      "removeBtn":"Code Type",
+      "help": "Add relevant product codes directly from vendor sites (eg Amazon) or from the Vendor Product Catalogue Database",
+      "singular": "Code Type",
+      "plural": "Code Types",
+      "key": "vendor_codes",
+      "type": "repeater",
+      "panel": {
+        "title_keys": ["vendor"]
+      },
+      "fields": [{
+        "title": "Code Type",
+        "key": "vendor",
+        "type": "select",
+        "width": 100,
+        "options": ["\\IDG\\Products\\Product_Post_Type", "get_vendor_code_options"],
+        "validation": {
+          "schema": {
+            "type": "string",
+            "enum": ["\\IDG\\Products\\Product_Post_Type", "get_valid_vendor_codes"]
+          },
+          "message": "*"
+        }
+      },
+      {
+        "title": "Codes",
+        "help" : "Multiple codes should be separated with a comma and no spaces",
+        "key": "code",
+        "type": "text",
+        "width": 75,
+        "validation": ["\\Custom_Fields\\Validation_Helpers", "commaSeparated"]
+      }]
+    }]
+  }]
+}

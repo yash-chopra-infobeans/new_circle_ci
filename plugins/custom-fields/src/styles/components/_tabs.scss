@@ -1,0 +1,10 @@
+.cf-tabs .components-tab-panel__tabs {
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  margin-bottom: 10px;
+}
+
+.cf-tabs .components-button.has-error {
+  color: $wp-red;
+}

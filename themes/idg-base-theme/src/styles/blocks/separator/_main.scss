@@ -1,0 +1,9 @@
+.wp-block-separator {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: var(--articleFeed--border-color);
+
+  // Block Level Margin
+  margin-bottom: $block-spacer;
+}

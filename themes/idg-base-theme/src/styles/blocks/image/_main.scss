@@ -1,0 +1,121 @@
+.wp-block-image img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.wp-block-image figcaption {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--figcaption--font-color);
+}
+
+.wp-block-image figcaption p {
+  margin-bottom: 0px;
+}
+
+.extendedBlock-wrapper {
+  margin-bottom: 16px;
+}
+
+.extendedBlock-wrapper.block-coreImage .wp-block-image {
+  margin-bottom: 0px;
+}
+
+.extendedBlock-wrapper.block-coreImage .imageCredit {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--imagecredit--font-color);
+  clear: both;
+}
+
+.extendedBlock-wrapper.block-coreImage.center {
+  display: table;
+  margin: 40px auto;
+}
+
+.extendedBlock-wrapper.block-coreImage.right {
+  .imageCredit {
+    text-align: right;
+  }
+}
+
+.extendedBlock-wrapper.block-coreImage.right {
+  float: right;
+}
+
+.extendedBlock-wrapper.block-coreImage.left {
+  float: left;
+}
+
+@media only screen and (max-width: 650px) {
+  .wp-block-columns .image-pull-quote {
+    grid-template-columns: inherit;
+  }
+
+  .layout--right-rail .wp-block-columns .image-pull-quote .pull-quote-block {
+    margin-left: 0px;
+    width: auto;
+  }
+
+  .extendedBlock-wrapper.block-coreImage .wp-block-image {
+    text-align: center;
+  }
+}
+
+.image-pull-quote {
+  grid-template-columns: 25% auto;
+  display: grid;
+  margin-bottom: 0px;
+  margin-top: 1.75em;
+}
+
+.wp-block-columns.image-pull-quote {
+  margin-bottom: 0px;
+}
+
+.layout--right-rail .image-pull-quote .pull-quote-block {
+  max-width: var(--pullquote--max-width);
+  padding-top: 6px;
+  margin-left: 23px;
+  display: block;
+}
+
+.image-pull-quote .extendedBlock-wrapper .imageCredit, .image-pull-quote figcaption { display: none; }
+
+.image-pull-quote .wp-block-pullquote::before { white-space: normal; }
+
+.image-pull-quote .extendedBlock-wrapper .wp-block-image img {
+  width: 150px;
+  height: 150px !important;
+  object-fit: contain;
+}
+
+.image-pull-quote .extendedBlock-wrapper.block-coreImage {
+  border-bottom: none;
+}
+.image-pull-quote .wp-block[data-align=left] > * {
+  padding-right: 2em;
+  margin-right: auto;
+}
+.image-pull-quote .wp-block[data-align=right] > * {
+  padding-left: 2em;
+  margin-left: auto;
+}
+
+.block-list-appender.wp-block,
+.extendedBlock-wrapper.block-coreImage.undefined,
+.wp-block-pullquote.block-editor-block-list__block {
+  clear: both;
+}
+
+.wp-block .wp-block-pullquote.block-editor-block-list__block {
+  clear: none;
+}
+
+.wp-block[data-align=left] figure.wp-block-image,
+.wp-block[data-align=right] figure.wp-block-image {
+  z-index: 21;
+}

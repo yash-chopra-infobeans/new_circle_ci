@@ -1,0 +1,53 @@
+.layout--right-rail {
+  position: relative;
+
+  .wp-block-column:first-of-type {
+    flex-basis: auto !important;
+    flex-grow: 1;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq("tablet") {
+      flex-basis: 0 !important;
+      max-width: none;
+    }
+  }
+
+  .wp-block-column:last-of-type {
+    display: none;
+    flex-direction: column;
+    max-width: 400px;
+
+    @include mq("tablet") {
+      display: block;
+    }
+  }
+
+  @media (min-width: 782px) {
+    .wp-block-column:not(:first-child) {
+      margin-left: 40px;
+    }
+  }
+}
+
+.ad-placeholder {
+  background: #fef8ee;
+  font-family: var(--base--font-family);
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #f0b849;
+  position: sticky;
+  top: 0;
+  height: 250px;
+  width: 80%;
+  padding: 10px 40px;
+}
+
+.editor-styles-wrapper .ad-placeholder h4 {
+  margin: 5px 0;
+}

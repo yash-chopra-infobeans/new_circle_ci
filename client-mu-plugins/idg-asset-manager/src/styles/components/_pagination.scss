@@ -1,0 +1,21 @@
+.assetManager-pagination {
+  display: flex;
+  border-top: 1px solid #eaebeb;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.assetManager-pagination > * + * {
+  margin-left: 10px;
+}
+
+.assetManager-pagination li a {
+  display: block;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.assetManager-pagination li.active a {
+  background: #007cba;
+  color: #fff;
+}

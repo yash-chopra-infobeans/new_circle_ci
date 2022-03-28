@@ -1,0 +1,154 @@
+.post-legacy {
+
+  .at-a-glance {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 620px;
+    width: 100%;
+    font-size: 14px;
+
+    .product-list-header {
+      text-transform: uppercase;
+      padding-bottom: 1px;
+      margin-bottom: 1rem;
+      border-bottom: 5px solid #e7e7e7;
+      font-size: 1rem;
+      font-weight: 900;
+    }
+
+    .aag-list {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 16px;
+      margin-top: 0;
+      margin-left: 0;
+
+      .aag-toggle {
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+        top: 3px;
+      }
+
+      .expanded-content {
+        clear: both;
+        overflow: hidden;
+        margin-top: 5px;
+        font-size: 14px;
+
+        ul {
+          padding-left: 17px;
+          list-style-position: initial;
+          list-style-type: disc;
+          margin: 5px 0;
+
+          li {
+            line-height: 1.45em;
+            color: #222;
+          }
+        }
+
+        h4 {
+          margin: 0;
+        }
+      }
+
+      .product-pros {
+        float: left;
+        width: 48%;
+        margin-top: 15px;
+      }
+
+      .product-cons {
+        float: right;
+        width: 48%;
+        margin-top: 15px;
+      }
+
+    }
+
+    .aag-item {
+      position: relative;
+      padding-left: 25px;
+      margin: 21px 0;
+      border-bottom: 1px solid #e7e7e7;
+      padding-bottom: 12px;
+      width: calc(100% - 25px);
+      overflow: hidden;
+
+      .product-left {
+        margin-bottom: 0;
+        float: left;
+        width: 50%;
+        line-height: 1.45em;
+
+        .product-name {
+          font-size: 16px;
+          line-height: 20px;
+          margin: 3px 0 8px 0;
+          color: #3f3f3f;
+        }
+      }
+
+      .product-right {
+        margin-bottom: 0;
+        width: 45%;
+        margin-left: 3%;
+        margin-top: 0;
+        float: right;
+
+        .price-msrp {
+          width: calc(100% - 85px);
+          text-align: right;
+          max-width: none;
+          float: left;
+          margin-right: 10px;
+        }
+
+        .product-list-price {
+          vertical-align: middle;
+          color: #000 !important;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 28.4px;
+          padding: 0;
+          margin-right: 5px;
+        }
+
+        .btn-amazon {
+          width: 75px;
+          margin-right: 0;
+          margin-left: 0;
+          box-sizing: border-box;
+          float: right;
+          font-size: 13px;
+          line-height: 26px;
+        }
+
+        .vendor {
+          float: right;
+          clear: both;
+          margin-left: 0;
+          margin-top: 6px;
+          font-style: italic;
+          font-size: 13px;
+          line-height: 13px;
+
+          .vendor-name {
+            font-style: normal;
+            text-decoration: none;
+            color: #161616;
+          }
+        }
+
+        .vendor a {
+          color: #979797;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}

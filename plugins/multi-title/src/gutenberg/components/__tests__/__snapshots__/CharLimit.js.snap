@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharLimit /> should have a grey bar when value is less than half of the character limit 1`] = `
+<div
+  className="wrappedInput-charLimit charLimit"
+>
+  <div
+    className="charLimit-count"
+    style={
+      Object {
+        "backgroundColor": "#6c7781",
+      }
+    }
+  >
+    6
+  </div>
+  <div
+    className="charLimit-bar"
+  >
+    <div
+      className="charLimit-bar-progress"
+      style={
+        Object {
+          "backgroundColor": "#6c7781",
+          "width": "40%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<CharLimit /> should have a red bar when the character limit has been exceeded 1`] = `
+<div
+  className="wrappedInput-charLimit charLimit"
+>
+  <div
+    className="charLimit-count"
+    style={
+      Object {
+        "backgroundColor": "#DC3232",
+      }
+    }
+  >
+    -22
+  </div>
+  <div
+    className="charLimit-bar"
+  >
+    <div
+      className="charLimit-bar-progress"
+      style={
+        Object {
+          "backgroundColor": "#DC3232",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<CharLimit /> should have an orange bar when the character limit is reached 1`] = `
+<div
+  className="wrappedInput-charLimit charLimit"
+>
+  <div
+    className="charLimit-count"
+    style={
+      Object {
+        "backgroundColor": "#F56E28",
+      }
+    }
+  >
+    0
+  </div>
+  <div
+    className="charLimit-bar"
+  >
+    <div
+      className="charLimit-bar-progress"
+      style={
+        Object {
+          "backgroundColor": "#F56E28",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<CharLimit /> should render component without errors when only passing charLimit prop 1`] = `
+<div
+  className="wrappedInput-charLimit charLimit"
+>
+  <div
+    className="charLimit-count"
+    style={
+      Object {
+        "backgroundColor": "#6c7781",
+      }
+    }
+  >
+    10
+  </div>
+  <div
+    className="charLimit-bar"
+  >
+    <div
+      className="charLimit-bar-progress"
+      style={
+        Object {
+          "backgroundColor": "#6c7781",
+          "width": "0%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

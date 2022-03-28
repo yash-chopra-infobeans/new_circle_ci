@@ -1,0 +1,388 @@
+.hero {
+  font-family: var(--base--font-family);
+  width: 100%;
+  position: relative;
+
+  // Block Level Margin
+  margin-bottom: $block-spacer;
+}
+
+.hero-inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hero .item {
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/**
+ * Hero-1 layout.
+ */
+.hero .hero-1 {
+  .item {
+    flex-basis: 100%;
+  }
+
+  .item-inner {
+    padding-top: 56.25%;
+
+    @include mq("mobile") {
+      padding-top: 41%;
+    }
+  }
+
+  .item h3 {
+    margin-top: 6px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+
+    @include mq("tablet") {
+      font-size: 52px;
+      line-height: 60px;
+    }
+  }
+
+  .item-text-inner {
+    padding: 24px;
+
+    @include mq("mobile") {
+      padding: 37px;
+    }
+
+    @include mq("tablet") {
+      padding: 40px;
+    }
+  }
+}
+
+/**
+ * Hero-2 layout.
+ */
+.hero .hero-2 {
+  .item {
+    flex-basis: 100%;
+
+    @include mq("mobile") {
+      flex-basis: calc(50% - 2.5px);
+    }
+  }
+
+  .item:last-of-type {
+    margin-top: 5px;
+    margin-left: 0px;
+
+    @include mq("mobile") {
+      margin-top: 0px;
+      margin-left: 5px;
+    }
+  }
+
+  .item:first-of-type h3 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .item-inner {
+    padding-top: 66.66%;
+  }
+
+  .item h3 {
+    margin-top: 6px;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+
+    @include mq("mobile") {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @include mq("tablet") {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 800;
+    }
+  }
+
+  .item-text-inner {
+    padding: 24px;
+
+    @include mq("tablet") {
+      padding: 32px;
+    }
+  }
+}
+
+/**
+ * Hero-3 layout.
+ */
+.hero .hero-3 {
+  .hero-col-1 {
+    flex-grow: 1;
+    flex-basis: 100%;
+    height: 100%;
+    margin-bottom: 0;
+
+    @include mq("mobile") {
+      flex-basis: calc(50% - 10px);
+    }
+
+    .item-inner {
+      padding-top: 58.1%;
+    }
+
+    .item h3 {
+      margin-top: 6px;
+      font-size: 22px;
+      line-height: 40px;
+      font-weight: 800px;
+
+      @include mq("tablet") {
+        font-size: 52px;
+        line-height: 60px;
+      }
+    }
+
+    .item-byline {
+      margin-top: 22px;
+    }
+
+    .item-text-inner {
+      padding: 24px;
+
+      @include mq("tablet") {
+        padding: 32px;
+      }
+    }
+  }
+  .hero-col-2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 10.76%;
+    flex-grow: 1;
+
+    .item {
+      margin-top: 5px;
+      margin-left: 0px;
+    }
+
+    .item:first-of-type {
+      margin-bottom: 0px;
+    }
+
+    @include mq("mobile") {
+      .item {
+        margin-top: 0px;
+        margin-left: 5px;
+      }
+
+      .item:first-of-type {
+        margin-bottom: 5px;
+      }
+    }
+
+    .item-inner {
+      padding-top: 65.5%;
+    }
+
+    .item h3 {
+      margin-top: 12px;
+      font-size: 22px;
+      line-height: 26px;
+
+      @include mq("mobile") {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @include mq("tablet") {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+
+    .item-byline {
+      margin-top: 17px;
+    }
+
+    .item-text-inner {
+      padding: 24px;
+    }
+  }
+}
+
+/**
+ * Hero-4 layout.
+ */
+.hero .hero-4 {
+  .hero-col-1 {
+    flex-grow: 1;
+    flex-basis: 100%;
+    height: 100%;
+    margin-bottom: 0;
+
+    @include mq("mobile-wide") {
+      flex-basis: 30%;
+    }
+
+    .item-inner {
+      padding-top: 66.66%;
+    }
+
+    .item h3 {
+      margin-top: 6px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .item-byline {
+      margin-top: 22px;
+    }
+
+    .item-text-inner {
+      padding: 24px;
+
+      @include mq("tablet") {
+        padding: 32px;
+      }
+    }
+  }
+  .hero-col-3 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin-top: 24px;
+
+    @include mq("mobile-wide") {
+      flex-basis: 10.76%;
+      padding-left: 20px;
+      margin-left: 20px;
+      margin-top: 0px;
+      border-left: 1px solid var(--hero--border-color);
+
+      .item:first-of-type {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--hero--border-color);
+      }
+
+      .item:last-of-type {
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid var(--hero--border-color);
+      }
+    }
+
+    .item {
+      width: 100%;
+
+      @include mq("tablet") {
+        width: 33%;
+      }
+
+      @include mq("mobile-wide") {
+        width: 100%;
+      }
+    }
+
+    .item-inner {
+      display: flex;
+
+      @include mq("tablet") {
+        display: block;
+      }
+
+      @include mq("mobile-wide") {
+        display: flex;
+      }
+    }
+
+    .item-image {
+      width: 191px;
+
+      @include mq("tablet") {
+        width: 100%;
+      }
+
+      @include mq("mobile-wide") {
+        width: 191px;
+        min-width: 191px;
+      }
+    }
+
+    .item-text {
+      position: static;
+      width: auto;
+      padding-left: 20px;
+      background: #fff;
+    }
+
+    .item-text-inner {
+      position: static;
+      width: auto;
+    }
+
+    .item h3 {
+      margin-top: 6px;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--hero--title-color);
+
+      @include mq("tablet") {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.hero .item a,
+.hero .item span { // span for gutenberg editor
+  color: #fff;
+}
+
+.hero .item h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.hero .item .item-byline {
+  display: none;
+  font-size: 12px;
+
+  @include mq("tablet") {
+    display: inline-block;
+  }
+}
+
+.hero .item-inner {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-color: #fff;
+}
+
+.hero .item-text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .82) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hero .item-text-inner {
+  position: absolute;
+  width: calc(100% - 40px);
+  left: 0;
+  bottom: 0;
+}

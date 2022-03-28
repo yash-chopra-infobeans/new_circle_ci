@@ -1,0 +1,873 @@
+{
+  "sections": [
+    {
+      "title": "Sourcepoint",
+      "name": "cmp"
+    },
+    {
+      "title": "Google Tag Manager",
+      "name": "gtm"
+    },
+    {
+      "title": "Google Ad Manager",
+      "name": "gpt"
+    },
+    {
+      "title": "IAS",
+      "name": "ias"
+    },
+    {
+      "title": "Index Exchange",
+      "name": "index_exchange"
+    },
+    {
+      "title": "Permutive",
+      "name": "permutive"
+    },
+    {
+      "title": "Outbrain",
+      "name": "outbrain"
+    },
+    {
+      "title": "Nativo",
+      "name": "nativo"
+    },
+    {
+      "title": "Blueconic",
+      "name": "blueconic"
+    },
+    {
+      "title": "Subscribers",
+      "name": "subscribers"
+    },
+    {
+      "title": "JW Player",
+      "name": "jw_player"
+    }
+  ],
+  "field_groups": [
+    {
+      "title": "Consent",
+      "name": "consent",
+      "sections": [
+        "gpt"
+      ],
+      "fields": [
+        {
+          "title": "Vendor ID",
+          "key": "vendor_id",
+          "type": "text",
+          "default": "5e74df5ff443bb795772df9c",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Account",
+      "name": "account",
+      "sections": [
+        "cmp"
+      ],
+      "fields": [
+        {
+          "title": "ID",
+          "key": "id",
+          "type": "text",
+          "default": "146",
+          "width": 100,
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        },
+        {
+          "title": "Base Endpoint",
+          "key": "base_endpoint",
+          "type": "text",
+          "default": "https://cmpv2.macworld.com",
+          "width": 100,
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        },
+        {
+          "title": "Source",
+          "key": "href",
+          "type": "text",
+          "default": "https://macworld.com",
+          "width": 100,
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        }
+      ]
+    },
+    {
+      "title": "GDPR",
+      "name": "gdpr",
+      "sections": [ "cmp" ],
+      "fields": [
+        {
+          "title": "Script",
+          "key": "script",
+          "type": "text",
+          "width": 100,
+          "default": "https://cmpv2.macworld.com/wrapperMessagingWithoutDetection.js",
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        },
+        {
+          "title": "Privacy Manager ID",
+          "key": "privacy_manager_id",
+          "type": "text",
+          "width": 100,
+          "default": "165662"
+        },
+        {
+          "title": "Property ID (AMP)",
+          "key": "property_id",
+          "type": "text",
+          "width": 100,
+          "default": "9228"
+        },
+        {
+          "title": "Privacy Manager ID (AMP)",
+          "key": "privacy_manager_id_amp",
+          "type": "text",
+          "default": "172450"
+        },
+        {
+          "title": "Source (AMP)",
+          "key": "href_amp",
+          "type": "text",
+          "default": "https://amp.macworld.com",
+          "width": 100,
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        }
+      ]
+    },
+    {
+      "title": "CCPA",
+      "name": "ccpa",
+      "sections": [ "cmp" ],
+      "fields": [
+        {
+          "title": "Script",
+          "key": "script",
+          "width": 100,
+          "type": "text",
+          "default": "https://ccpa.sp-prod.net/ccpa.js",
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        },
+        {
+          "title": "Origin",
+          "key": "origin",
+          "width": 100,
+          "type": "text",
+          "default": "https://ccpa-service.sp-prod.net",
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        },
+        {
+          "title": "Privacy Manager ID",
+          "key": "privacy_manager_id",
+          "type": "text",
+          "default": "3932",
+          "width": 100
+        },
+        {
+          "title": "Privacy Manager UUID",
+          "key": "privacy_manager_uuid",
+          "type": "text",
+          "default": "5dfa75f712068b42714ed7b8",
+          "width": 100
+        },
+        {
+          "title": "Property ID (AMP)",
+          "key": "property_id",
+          "type": "text",
+          "width": 100,
+          "default": "16078"
+        },
+        {
+          "title": "Source (AMP)",
+          "key": "href_amp",
+          "type": "text",
+          "default": "https://ccpa.amp.macworld.com",
+          "width": 100,
+          "validation": [ "\\Custom_Fields\\Validation_Helpers", "required"]
+        }
+      ]
+    },
+    {
+      "title": "Config",
+      "name": "config",
+      "sections": [
+        "gpt"
+      ],
+      "fields": [
+        {
+          "title": "Slot Prefix",
+          "key": "prefix",
+          "type": "text",
+          "default": "/8456/IDG.US_CSMB_Macworld.com/",
+          "width": 100
+        },
+        {
+          "title": "Threshold",
+          "key": "threshold",
+          "type": "text",
+          "default": "0.7",
+          "help": "The element threshold for an in-page ad to appear. The threshold must be a multiple of 1.0 with a minimum value of 0 and maximum value of 1.",
+          "validation": {
+            "message": "Invalid threshold",
+            "schema": {
+              "enum": ["0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1"]
+            }
+          },
+          "width": 100
+        },
+        {
+          "title": "Slot Definitions",
+          "key": "slots",
+          "singular": "Slot",
+          "plural": "Slots",
+          "type": "repeater",
+          "disable_removal": true,
+          "max_items": 7,
+          "default": [
+            {
+              "name": "gpt-leaderboard",
+              "template": "banner",
+              "disabled": false,
+              "sticky_duration": "12",
+              "pos": "ATF1",
+              "size": "320x50",
+              "size_definitions":[
+                {
+                  "breakpoint": "970",
+                  "sizes": "970x250,728x90"
+                },
+                {
+                  "breakpoint": "728",
+                  "sizes": "728x90,468x60"
+                },
+                {
+                  "breakpoint": "320",
+                  "sizes": "300x50,320x50"
+                }
+              ]
+            },
+            {
+              "name": "gpt-leaderboardmainbod",
+              "template": "article",
+              "disabled": false,
+              "insert_after_p": "4",
+              "insert_after_article": "4",
+              "insert_after_article_offset": "6",
+              "refresh_interval": "30",
+              "refresh_amount": "3",
+              "size": "300x50",
+              "pos": "BTF{{count}}",
+              "size_definitions":[
+                {
+                  "breakpoint": "970",
+                  "sizes": "728x90"
+                },
+                {
+                  "breakpoint": "728",
+                  "sizes": "300x50,320x50,300x250"
+                },
+                {
+                  "breakpoint": "320",
+                  "sizes": "300x50,320x50,300x250"
+                }
+              ]
+            },
+            {
+              "name": "gpt-leaderboardfoot",
+              "template": "footer",
+              "disabled": false,
+              "size": "300x50",
+              "pos": "BTF",
+              "size_definitions":[
+                {
+                  "breakpoint": "970",
+                  "sizes": "970x250,728x90"
+                },
+                {
+                  "breakpoint": "728",
+                  "sizes": "728x90,468x60"
+                },
+                {
+                  "breakpoint": "320",
+                  "sizes": "300x50,320x50"
+                }
+              ]
+            },
+            {
+              "name": "gpt-rightrail",
+              "template": "right_rail",
+              "disabled": false,
+              "size": "120x600",
+              "replace_interval": "20",
+              "replace_amount": "5",
+              "refresh_interval": "20",
+              "section": "Sidebardfpatf{{count}}",
+              "pos": "ATF1",
+              "size_definitions":[
+                {
+                  "breakpoint": "970",
+                  "sizes": "300x250,300x600,160x600,120x600"
+                },
+                {
+                  "breakpoint": "728",
+                  "sizes": ""
+                },
+                {
+                  "breakpoint": "320",
+                  "sizes": ""
+                }
+              ]
+            },
+            {
+              "name": "gpt-welcome",
+              "template": "overlay",
+              "disabled": false,
+              "size": "640x480",
+              "pos": "gpt-welcome",
+              "size_definitions":[
+                {
+                  "breakpoint": "970",
+                  "sizes": "640x480"
+                },
+                {
+                  "breakpoint": "728",
+                  "sizes": "640x480"
+                },
+                {
+                  "breakpoint": "320",
+                  "sizes": ""
+                }
+              ]
+            },
+            {
+              "name": "gpt-skin",
+              "template": "skin",
+              "disabled": false,
+              "size": "1x1",
+              "pos": "gpt-skin",
+              "size_definitions":[
+                {
+                  "breakpoint": "970",
+                  "sizes": "1x1"
+                },
+                {
+                  "breakpoint": "728",
+                  "sizes": ""
+                },
+                {
+                  "breakpoint": "320",
+                  "sizes": ""
+                }
+              ]
+            },
+            {
+              "name": "gpt_bouncex",
+              "template": "bouncex",
+              "disabled": false,
+              "size": "1x3",
+              "pos": "gpt_bouncex",
+              "size_definitions":[
+                {
+                  "breakpoint": "970",
+                  "sizes": "1x3"
+                },
+                {
+                  "breakpoint": "728",
+                  "sizes": "1x3"
+                },
+                {
+                  "breakpoint": "320",
+                  "sizes": "1x3"
+                }
+              ]
+            }
+          ],
+          "panel": {
+            "title_keys": [
+              "name"
+            ]
+          },
+          "fields": [
+            {
+              "title": "Slot Name",
+              "key": "name",
+              "type": "text",
+              "width": 100,
+              "validation": [
+                "\\Custom_Fields\\Validation_Helpers",
+                "required"
+              ]
+            },
+            {
+              "title": "Template",
+              "key": "template",
+              "hidden": true,
+              "type": "select",
+              "help": "Select a predefined template to determine the layout and behavior of the slot.",
+              "options": [ "\\IDG\\Third_Party\\GPT\\Templates", "get_options" ],
+              "width": 100,
+              "validation": [
+                "\\Custom_Fields\\Validation_Helpers",
+                "required"
+              ]
+            },
+            {
+              "title": "Disable?",
+              "key": "disabled",
+              "type": "toggle",
+              "width": 100
+            },
+            {
+              "title": "Sticky Duration (seconds)",
+              "key": "sticky_duration",
+              "type": "number",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "banner"
+              }],
+              "width": 100
+            },
+            {
+              "title": "Insert after every nth paragraph",
+              "key": "insert_after_p",
+              "type": "number",
+              "help": "Insert after every nth paragraph, unless a JW player is set to render.",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "article"
+              }],
+              "width": 100
+            },
+            {
+              "title": "Insert after every nth article feed item",
+              "key": "insert_after_article",
+              "type": "number",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "article"
+              }],
+              "width": 100
+            },
+            {
+              "title": "Offset insert after every nth article feed item",
+              "key": "insert_after_article_offset",
+              "type": "number",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "article"
+              }],
+              "width": 100
+            },
+            {
+              "title": "Replace Interval (Seconds)",
+              "key": "replace_interval",
+              "type": "number",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "right_rail"
+              }],
+              "help": "After how many seconds should the ad be replaced?",
+              "width": 100
+            },
+            {
+              "title": "Replace Amount",
+              "key": "replace_amount",
+              "type": "number",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "right_rail"
+              }],
+              "help": "The maximum amount of slots to be rendered.",
+              "width": 100
+            },
+            {
+              "title": "Refresh Interval (Seconds)",
+              "key": "refresh_interval",
+              "type": "number",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "article"
+              }, {
+                "key": "template",
+                "operator": "===",
+                "value": "right_rail"
+              }],
+              "help": "After how many seconds should the ad be refreshed if it's in view?",
+              "width": 100
+            },
+            {
+              "title": "Refresh Amount",
+              "key": "refresh_amount",
+              "type": "number",
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "article"
+              }],
+              "help": "The maximum amount of times the ad should be refreshed.",
+              "width": 100
+            },
+            {
+              "title": "Section",
+              "key": "section",
+              "type": "handlebars",
+              "variables": [
+                "count"
+              ],
+              "conditions": [{
+                "key": "template",
+                "operator": "===",
+                "value": "right_rail"
+              }],
+              "help": "The section key for ad targetting. The {{count}} variable will be incremented if the ad slot is replaced.",
+              "width": 100
+            },
+            {
+              "title": "Size",
+              "key": "size",
+              "type": "text",
+              "help": "The fallback size defined when creating the slot. Eg. '640x480'",
+              "validation": [
+                "\\Custom_Fields\\Validation_Helpers",
+                "required"
+              ]
+            },
+            {
+              "key": "size_definitions",
+              "type": "repeater",
+              "singular": "Size Definition",
+              "plural": "Size Definitions",
+              "disable_removal": true,
+              "max_items": 3,
+              "panel": {
+                "title_keys": [
+                  "breakpoint"
+                ]
+              },
+              "width": 100,
+              "fields": [
+                {
+                  "title": "Breakpoint",
+                  "key": "breakpoint",
+                  "hidden": true,
+                  "type": "select",
+                  "options": [
+                    {
+                      "label": "Select a predefined breakpoint",
+                      "disabled": true,
+                      "value": ""
+                    },
+                    {
+                      "label": "Small [320]",
+                      "value": "320"
+                    },
+                    {
+                      "label": "Medium [728]",
+                      "value": "728"
+                    },
+                    {
+                      "label": "Large [970]",
+                      "value": "970"
+                    }
+                  ],
+                  "width": 100
+                },
+                {
+                  "title": "Sizes",
+                  "key": "sizes",
+                  "type": "text",
+                  "help": "Multiple sizes seperated by a comma. E.g '970x250,728x90,970x90'. If blank no ads will be served from this breakpoint.",
+                  "width": 100
+                }
+              ]
+            },
+            {
+              "title": "Position Key",
+              "key": "pos",
+              "single_line": true,
+              "plain_text": true,
+              "variables": [
+                "count"
+              ],
+              "type": "handlebars",
+              "help": "The key used for position targeting. {{count}} will be replaced by an incremental integer of the amount of this ad definition."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Account",
+      "name": "account",
+      "sections": ["gtm"],
+      "fields": [
+        {
+          "title": "ID",
+          "type": "text",
+          "key": "id",
+          "default": "GTM-5JGZ3LH",
+          "width": 100
+        },
+        {
+          "title": "AMP ID",
+          "type": "text",
+          "key": "amp_id",
+          "default": "GTM-KTZGCDR",
+          "width": 100
+        },
+        {
+          "title": "UA Number",
+          "type": "text",
+          "key": "ua_number",
+          "default": "UA-870741-1",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Account",
+      "name": "account",
+      "sections": ["ias"],
+      "fields": [
+        {
+          "title": "ID",
+          "type": "text",
+          "key": "pub_id",
+          "default": "8879",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Account",
+      "name": "account",
+      "sections": ["permutive"],
+      "fields": [
+        {
+          "title": "Workspace ID",
+          "type": "text",
+          "key": "workspace_id",
+          "default": "f5b3be27-f789-4ef1-8867-37c67da5b361",
+          "width": 100
+        },
+        {
+          "title": "API Key",
+          "type": "text",
+          "key": "api_key",
+          "default": "84c7e805-5ce9-41f4-b988-3529488bab1c",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Config",
+      "name": "config",
+      "sections": [ "index_exchange" ],
+      "fields": [
+        {
+          "title": "ID",
+          "key": "id",
+          "type": "text",
+          "default": "183980-206117126681438"
+        }
+      ]
+    },
+    {
+      "title": "Config",
+      "name": "config",
+      "sections": [ "blueconic" ],
+      "fields": [
+        {
+          "title": "Script",
+          "key": "script",
+          "type": "text",
+          "default": "https://cdn.blueconic.net/idg.js"
+        }
+      ]
+    },
+    {
+      "title": "Config",
+      "name": "config",
+      "sections": [ "subscribers" ],
+      "fields": [
+        {
+          "title": "ID",
+          "key": "id",
+          "type": "text",
+          "default": "ce223ed1-731c-42ea-a371-710bb2897cce",
+          "width": 100
+        },
+        {
+          "title": "Script",
+          "key": "script",
+          "type": "text",
+          "default": "https://cdn.subscribers.com/assets/subscribers.js",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Config",
+      "name": "config",
+      "sections": [ "outbrain" ],
+      "fields": [
+        {
+          "title": "Script",
+          "key": "script",
+          "type": "text",
+          "default": "https://widgets.outbrain.com/outbrain.js",
+          "width": 100
+        },
+        {
+          "title": "Widget ID",
+          "key": "widget_id",
+          "type": "text",
+          "default": "AR_1",
+          "width": 100
+        },
+        {
+          "title": "AMP Widget IDs",
+          "key": "amp_widget_ids",
+          "type": "text",
+          "default": "AMP_1",
+          "width": 100
+        },
+        {
+          "title": "Source",
+          "key": "src",
+          "type": "text",
+          "default": "https://www.macworld.com",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Config",
+      "name": "config",
+      "sections": [ "nativo" ],
+      "fields": [
+        {
+          "title": "Script",
+          "key": "script",
+          "type": "text",
+          "default": "https://s.ntv.io/serve/load.js",
+          "width": 100
+        },
+        {
+          "title": "Insert after nth paragraph in article",
+          "key": "insert_after_p",
+          "type": "number",
+          "default": "10",
+          "width": 100
+        },
+        {
+          "title": "Insert after every nth article in article feed",
+          "key": "insert_after_article",
+          "type": "number",
+          "default": "20",
+          "width": 100
+        },
+        {
+          "title": "Insert offset in article feed",
+          "key": "insert_after_article_offset",
+          "type": "number",
+          "default": "4",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Config",
+      "name": "config",
+      "sections": [ "jw_player" ],
+      "fields": [
+        {
+          "title": "Insert after nth paragraph",
+          "key": "insert_after_p",
+          "type": "number",
+          "default": "4",
+          "width": 100
+        },
+        {
+          "title": "Insert after nth article in feed",
+          "key": "insert_after_article",
+          "type": "number",
+          "default": "4",
+          "width": 100
+        },
+        {
+          "title": "Embed library id",
+          "key": "player_library_id",
+          "type": "text",
+          "default": "kAvvfxjt",
+          "width": 100
+        },
+        {
+          "title": "AMP library id",
+          "key": "amp_player_library_id",
+          "type": "text",
+          "default": "wySF9V4I",
+          "width": 100
+        },
+        {
+          "title": "Floating player Playlist ID",
+          "key": "floating_player_playlist_id",
+          "type": "text",
+          "default": "nSKQMw78",
+          "width": 100
+        },
+        {
+          "title": "Ad Schedule ID",
+          "key": "adscheduleid",
+          "type": "text",
+          "default": "fQeHP23f",
+          "width": 100
+        },
+        {
+          "title": "Floating player Ad Schedule ID",
+          "key": "floating_player_adscheduleid",
+          "type": "text",
+          "default": "fQeHP23f",
+          "width": 100
+        },
+        {
+          "title": "Description url for vast",
+          "key": "description_url",
+          "type": "text",
+          "default": "http://www.macworld.com",
+          "width": 100
+        },
+        {
+          "title": "Sizes",
+          "key": "sz",
+          "type": "text",
+          "default": "640x480",
+          "width": 100
+        },
+        {
+          "title": "Companion sizes",
+          "key": "ciu_szs",
+          "type": "text",
+          "default": "300x250,728x90",
+          "width": 100
+        },
+        {
+          "title": "Player branding",
+          "key": "player_branding",
+          "type": "image",
+          "width": 100
+        }
+      ]
+    }
+  ]
+}

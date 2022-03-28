@@ -1,0 +1,50 @@
+.post-legacy {
+
+  .product.product-chart {
+    border: 2px solid #eee;
+    margin-bottom: 1rem;
+  }
+
+  .product-chart .chart-title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    padding: 7px 20px;
+    margin: 0;
+    text-transform: uppercase;
+    background-color: #eee;
+    color: #2b2b2b;
+  }
+
+  .product-chart .intro-text, .outro-text {
+    margin: 1em;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #2b2b2b;
+  }
+
+  .productChart ol {
+    margin: 0px;
+    list-style: disc;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+  }
+
+  .productChart li {
+    padding: 5px;
+  }
+
+  .productChart.numbering {
+    margin-top: 10px;
+  }
+
+  .product-chart a.btn-amazon {
+    font-size: 13px;
+    padding: 4px 10px;
+
+  }
+
+  .product-chart a.product-name {
+    color: #25a7d7;
+  }
+
+}

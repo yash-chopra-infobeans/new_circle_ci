@@ -1,0 +1,25 @@
+.post-legacy {
+
+  blockquote {
+    font-size: var(--blockquote--font-size);
+    font-weight: 400;
+    padding: 5px 20px;
+    border-left: 4px solid var(--blockquote--border-color);
+    color: var(--blockquote--font-color);
+    line-height: var(--blockquote--line-height);
+
+    cite {
+      color: var(--blockquote--citation-color);
+      font-size: var(--blockquote--citation-font-size);
+      font-style: italic;
+      line-height: var(--blockquote--citation-line-height);
+
+      &::before {
+        content: "\2014 \2009";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

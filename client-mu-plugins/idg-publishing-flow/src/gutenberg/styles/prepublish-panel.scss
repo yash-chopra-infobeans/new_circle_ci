@@ -1,0 +1,25 @@
+.editor-post-publish-panel > .editor-post-publish-panel__header {
+  display: none;
+}
+
+.editor-post-publish-panel__prepublish {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+
+.publication-flow__prepublish {
+  order: -1;
+  margin-bottom: 10px;
+}
+
+.publication-flow__prepublish--message:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.publication-flow__prepublish--notice {
+  background-color: #ecb3b3;
+  padding: 10px;
+  margin: -24px -24px 20px;
+  text-align: center;
+}

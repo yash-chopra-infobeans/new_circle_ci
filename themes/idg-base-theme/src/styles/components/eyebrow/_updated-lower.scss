@@ -1,0 +1,23 @@
+.entry-eyebrow--updated-lower,
+.item-eyebrow--updated-lower {
+  @extend %eyebrow;
+  font-size: 18px;
+  color: var(--eyebrow--sponsered--content--font-color);
+  font-family: var(--eyebrow--sponsered--font-family);
+  font-weight: var(--eyebrow--sponsered--font-weight);
+  letter-spacing: var(--eyebrow--sponsered--letter-spacing);
+}
+
+.ntv-item .item-eyebrow--updated-lower {
+  color: var(--eyebrow--sponsered--content--font-color);
+}
+
+.hero .item-eyebrow--updated-lower {
+  padding: 5px 12px;
+  font-size: 11px;
+  color: var(--hero-eyebrow--default--font-color);
+  font-family: var(--hero-eyebrow--default--font-family);
+  font-weight: var(--hero-eyebrow--default--font-weight);
+  letter-spacing: var(--hero-eyebrow--default--letter-spacing);
+  background-color: var(--hero-eyebrow--default--background-color);
+}

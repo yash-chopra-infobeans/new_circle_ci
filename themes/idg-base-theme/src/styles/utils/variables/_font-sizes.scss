@@ -1,0 +1,47 @@
+/**
+ * Header font sizes.
+ */
+$mobile-header-sizes: (
+  h1: 32px,
+  h2: 24px,
+  h3: 20px,
+  h4: 16px,
+);
+
+$tablet-header-sizes: (
+  h1: 52px,
+  h2: 32px,
+  h3: 24px,
+  h4: 20px,
+);
+
+$desktop-header-sizes: (
+  h1: 52px,
+  h2: 32px,
+  h3: 24px,
+  h4: 20px,
+);
+
+/**
+ * Header line height.
+ */
+$mobile-header-line-height: (
+  h1: 48px,
+  h2: 32px,
+  h3: 24px,
+  h4: 24px,
+);
+
+$tablet-header-line-height: (
+  h1: 60px,
+  h2: 36px,
+  h3: 32px,
+  h4: 24px,
+);
+
+$desktop-header-line-height: (
+  h1: 60px,
+  h2: 36px,
+  h3: 32px,
+  h4: 24px,
+);

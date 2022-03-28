@@ -1,0 +1,33 @@
+.productSelector .components-card {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0;
+}
+
+.productSelector-title,
+h2.productSelector-title {
+  margin: 0;
+  font-size: 13px;
+}
+
+.productSelector-warning {
+  font-size: 11px;
+  background-color: $wp-yellow-tint-90;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.productSelector-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.productSelector-controls {
+  display: flex;
+}
+
+.productSelector-controls > * {
+  margin-right: 5px;
+}

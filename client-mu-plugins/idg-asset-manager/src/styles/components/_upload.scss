@@ -1,0 +1,39 @@
+.assetManager-uploadGrid.assetManager--isMultiple.assetManager--hasSelected {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 5fr;
+
+  @include mq(desktop) {
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+.assetManager-modal .assetManager-uploadGrid.assetManager--hasSelected .filesList,
+.assetManager-uploadGrid.assetManager--hasSelected .filesList {
+  grid-template-columns: 1fr;
+}
+
+.assetManager-uploadGrid.assetManager--hasSelected .filesList .fileItem .fileItem-thumbnail .fileItem-centered {
+  opacity: .15;
+}
+
+.assetManager-uploadGrid.assetManager--hasSelected .filesList .fileItem.fileItem--isSelected .fileItem-thumbnail .fileItem-centered {
+  opacity: 1;
+}
+
+.assetManager-uploadBar .uploadBtn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .apply-btn {
+    width: 75%;
+    text-align: left;
+  }
+}
+
+.assetManager-uploadBar .uploadBtn-wrapper .components-spinner {
+  margin: 0 10px;
+}
+.checkboxSelectAll {
+  margin-top: 0px;
+}

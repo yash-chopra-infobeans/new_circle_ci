@@ -1,0 +1,151 @@
+.price-comparison {
+  border: 1px solid var(--price-comparison--border-color);
+  margin-bottom: 1.5rem;
+
+  &__placeholder {
+    .components-placeholder__instructions {
+      text-align: center;
+      width: 100%;
+    }
+
+    .components-placeholder__fieldset {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__record {
+    display: grid;
+    grid-template-columns: 31% 25% 20% 20%; // Visually adjusted, wireframe doesn't seem to have equal columns.
+    grid-gap: .5rem;
+    align-items: center;
+    font-family: var(--price-comparison--record--font-family);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--price-comparison--record--border-color);
+
+    @include mq($until: mobile) {
+      grid-template-columns: 38% 28% 28%;
+      padding: 1.5rem 1rem;
+    }
+
+    &--header {
+      font-family: var(--price-comparison--header--font-family);
+      font-size: .8rem;
+      color: var(--price-comparison--header--font-color);
+      font-weight: bold;
+      padding: .5rem 1.5rem;
+      background-color: var(--price-comparison--header--background-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      .price-comparison__delivery {
+        color: var(--price-comparison--header--font-color);
+      }
+    }
+
+    &--footer {
+      grid-gap: 2rem;
+      grid-template-columns: 1fr fit-content(200px);
+      color: var(--price-comparison--footer--font-color);
+      font-size: .75rem;
+      font-style: italic;
+      border-bottom: none;
+      padding: 1rem 1.5rem;
+
+      @include mq($until: mobile) {
+        grid-template-columns: 1fr fit-content(200px);
+        grid-gap: 1rem;
+      }
+    }
+  }
+
+  .price-comparison__image {
+    span {
+      margin: 0;
+      vertical-align: middle;
+      font-weight: 700;
+    }
+
+    img {
+      max-height: 50px;
+      max-width: 100px;
+
+      @include mq($until: mobile) {
+        max-width: 70px;
+      }
+    }
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+
+  &__delivery {
+    color: var(--price-comparison--delivery-text--font-color);
+
+    @include mq($until: mobile) {
+      display: none;
+    }
+  }
+
+  .price-comparison__view-button { // Needed higher specificity on Anchor tags.
+    display: block;
+    color: var(--button-primary--font-color);
+    font-size: .75rem;
+    background-color: var(--price-comparison--view-button--background-color);
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: var(--price-comparison--view-button--letter-spacing);
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: var(--button-primary--border-radius);
+    padding: .5rem 2rem;
+    float: right;
+    border: 1px solid var(--price-comparison--view-button--background-color);
+
+    &:hover {
+      background-color: var(--button-primary--font-color);
+      border: 1px solid var(--price-comparison--view-button--background-color);
+      color: var(--price-comparison--view-button--background-color);
+    }
+
+    @include mq($until: mobile) {
+      padding: .5rem 1rem;
+    }
+  }
+
+  &__hidden-records-wrapper {
+    display: none;
+
+    &--is-open {
+      display: block;
+    }
+  }
+
+  &__footer-text {
+    text-align: right;
+    line-height: 1rem;
+
+    @include mq($until: mobile) {
+      text-align: left;
+    }
+  }
+
+  &__view-more-button {
+    cursor: pointer;
+    color: var(--price-comparison--view-more-button--font-color);
+    font-size: .875rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    padding: 0;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}

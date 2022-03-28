@@ -1,0 +1,23 @@
+{
+    "name": "bigbite/multi-title",
+    "description": "Gives your site the ability to support multiple, different titles.",
+    "type": "wordpress-plugin",
+    "require": {},
+    "require-dev": {
+      "automattic/jetpack-autoloader": "^1"
+    },
+    "autoload": {
+      "files": [
+        "inc/asset-settings.php",
+        "inc/setup.php"
+      ],
+      "psr-4": {
+        "BigBite\\MultiTitle\\": "inc/"
+      },
+      "classmap": [ "inc/" ]
+    },
+    "scripts": {},
+    "config": {
+        "preferred-install": "dist"
+    }
+}

@@ -1,0 +1,13 @@
+.thumbnails {
+  @include mq($until: mobile) {
+    @include cols(".thumbnail", 1);
+  }
+
+  @include mq(mobile, desktop) {
+    @include cols(".thumbnail", 2);
+  }
+
+  @include mq(desktop-small) {
+    @include cols(".thumbnail", 4);
+  }
+}
