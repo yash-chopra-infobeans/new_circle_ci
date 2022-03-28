@@ -1,0 +1,20 @@
+.custom-save-button {
+  order: -1;
+}
+
+/* Hide code save buttons */
+.editor-post-switch-to-draft,
+.editor-post-save-draft,
+/* Hide autosaves */
+.edit-post-header__settings span.is-saved,
+.edit-post-header__settings span.is-autosaving {
+  display: none;
+}
+
+.block-editor-post-preview__button-toggle {
+  margin-left: 10px;
+}
+
+button[aria-label="Settings"] {
+  order: 1;
+}

@@ -1,0 +1,37 @@
+.cf-imageUpload-preview {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid $wp-grey-light-200;
+  min-height: 150px;
+  padding: 7.5px;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.cf-imageUpload-previewImage {
+  max-width: 100%;
+  max-height: 200px;
+  margin-bottom: 10px;
+}
+
+.cf-imageUpload-previewContent {
+  text-align: center;
+}
+
+.cf-imageUpload-preview .cf-imageUpload-previewText,
+.cf-imageUpload--error .cf-imageUpload-previewError {
+  text-align: center;
+  font-size: 12px;
+  font-family: $font-system-ui;
+  margin-bottom: 5px;
+}
+
+.cf-imageUpload-previewError {
+  color: $wp-red;
+}

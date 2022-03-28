@@ -1,0 +1,84 @@
+.entry-meta {
+  display: flex;
+}
+
+.entry-meta .meta-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.entry-meta .meta-text.no-flex {
+  display: block;
+}
+
+.entry-meta .author-image {
+  @include mq("mobile") {
+    display: flex;
+  }
+
+  display: none;
+  flex: none;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  margin-right: 17px;
+  border-radius: 65px;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.entry-meta .byline {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.entry-meta .meta-text-top {
+  font-size: 16px;
+}
+
+.entry-meta .meta-text div.meta-text-bottom {
+  .publication-site + .posted-on {
+    margin-left: 7px;
+    padding-left: 7px;
+    border-left: 1px solid #888;
+    font-size: 14px;
+    line-height: .625rem;
+  }
+}
+
+.entry-meta .job-title {
+  font-weight: 400;
+}
+
+.entry-meta .tooltip {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 7px;
+  padding-left: 7px;
+  border-left: 1px solid var(--single-article--first-byline-border-color);
+  line-height: 10px;
+}
+
+.entry-meta .posted-on {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--meta--posted-on--font-color);
+  border-left: 1px solid var(--single-article--second-byline-border-color);
+  line-height: 10px;
+  padding-left: 7px;
+  margin-left: 7px;
+}
+
+.entry-meta .blog-title, .entry-meta .podcast-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,31 @@
+.assetManager-view {
+  display: flex;
+}
+
+.assetManager-view .assetManager-main {
+  width: 60%;
+  margin-right: 20px;
+
+  @include mq(desktop) {
+    width: 70%;
+  }
+}
+
+.assetManager-view .assetManager-sidebar {
+  width: 40%;
+
+  @include mq(desktop) {
+    width: 30%;
+  }
+}
+
+.assetManager-page .assetManager-main .files,
+.assetManager-page .searchSidebar .searchSidebar-content {
+  height: calc(100vh - 443px);
+  overflow: auto;
+  padding: 1px 1px 20px 1px;
+}
+
+.assetManager-page .searchSidebar .searchSidebar-content {
+  height: calc(100vh - 276px);
+}

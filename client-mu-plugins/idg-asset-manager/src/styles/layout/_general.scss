@@ -1,0 +1,100 @@
+#adminmenuback {
+  z-index: 2 !important;
+}
+
+.vhScroll {
+  @include mq(desktop) {
+    height: calc(100vh - 179px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    padding-right: 1px;
+    padding-left: 1px;
+    box-sizing: border-box;
+  }
+}
+
+.assetManager-fixedBottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px 20px 0;
+  border-top: 1px solid #eaebeb;
+  text-align: right;
+  background: #fff;
+  z-index: 1;
+  box-sizing: border-box;
+  .bottom-text {
+    font-weight: bold;
+    line-height: 36px;
+    padding-right: 10px;
+  }
+}
+
+.fieldWithIcon {
+  position: relative;
+}
+
+.fieldWithIcon .dashicon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.fieldWithIcon.has-label svg {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  margin-top: 0;
+}
+
+.fieldWithIcon .components-text-control__input {
+  padding-right: 35px;
+}
+
+.fieldWithIcon.fieldWithIcon--left .components-text-control__input {
+  padding-left: 35px;
+  padding-right: initial;
+}
+
+.fieldWithIcon.fieldWithIcon--left .dashicon {
+  left: 10px;
+}
+
+#assetManager-container .components-text-control__input,
+#assetManager-container .components-textarea-control__input,
+#assetManager-container .components-select-control__input,
+.assetManager-modal .components-text-control__input,
+.assetManager-modal .components-textarea-control__input,
+.assetManager-modal .components-select-control__input {
+  box-sizing: border-box !important;
+  color: #555d66 !important;
+  border: 1px solid #8d96a0 !important;
+  border-radius: 5px !important;
+  min-height: 41px !important;
+}
+
+#assetManager-container .default-border .components-text-control__input,
+#assetManager-container .default-border .components-textarea-control__input,
+#assetManager-container .default-border .components-select-control__input,
+.assetManager-modal .default-border .components-text-control__input,
+.assetManager-modal .default-border .components-textarea-control__input,
+.assetManager-modal .default-border .components-select-control__input,
+.default-border .selectableInput {
+  background-color: #ddeef6;
+}
+
+.default-border .components-select-control__input option {
+  background-color: #fff;
+}
+
+.searchTopbar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.searchTopbar .dateRange {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,177 @@
+.review {
+  position: relative;
+  padding: 25px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  font-family: var(--heading--font-family);
+  color: var(--base--font-color);
+  font-size: 16px;
+  max-width: 100%;
+  margin: 0 auto 40px auto;
+}
+
+.review p,
+.review .review-title,
+.review .review-subTitle {
+  margin-bottom: 0px;
+}
+
+.review .review-title,
+.review .review-subTitle {
+  font-weight: 700;
+}
+
+#review-body.review .review-title {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 0 15px 0;
+}
+
+.review .review-subTitle {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 0 5px 0;
+}
+
+.review .review-subTitle--borderTop {
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.review .review-logo,
+.review .review-banner {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 90px;
+}
+
+.review .review-banner {
+  background-color: #007cba;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: var(--base--font-family);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 59px;
+}
+
+.review .review-banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  border-style: solid;
+  border-width: 20px 45px 0 0;
+  border-color: #007cba transparent transparent transparent;
+  width: 40px;
+  z-index: 99;
+}
+
+.review .review-banner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  border-style: solid;
+  border-width: 0 45px 20px 0;
+  border-color: transparent #007cba transparent transparent;
+  width: 40px;
+  z-index: 99;
+}
+
+.review .review-product-banner {
+  width: 90px;
+  background-color: #007cba;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: var(--base--font-family);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 59px;
+  margin: 0 15px 15px 0;
+}
+
+.review .review-product-banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-style: solid;
+  border-width: 20px 45px 0 0;
+  border-color: #007cba transparent transparent transparent;
+  width: 40px;
+  z-index: 99;
+}
+
+.review .review-product-banner::after {
+  content: "";
+  position: absolute;
+  left: 45px;
+  bottom: -5px;
+  border-style: solid;
+  border-width: 0 45px 20px 0;
+  border-color: transparent #007cba transparent transparent;
+  width: 40px;
+  z-index: 99;
+}
+
+.review .review-list {
+  margin: 0 0 5px 0px;
+  padding-left: 20px;
+}
+
+.review .review-list li,
+.review p.verdict {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.review .starRating {
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: 15px;
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "★★★★★";
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #e42e22 var(--percent), #f3f5f6 var(--percent));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.review-price {
+  margin-bottom: 10px;
+  padding-top: 15px;
+}
+
+.review-best-price {
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.review-columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.review-column {
+  width: 45%;
+
+  @include mq($until: mobile) {
+    width: 100%;
+  }
+}

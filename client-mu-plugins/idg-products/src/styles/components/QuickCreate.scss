@@ -1,0 +1,8 @@
+.productQuickCreate-controls {
+  display: flex;
+  margin-top: 10px;
+}
+
+.productQuickCreate-controls > *:not(last-child) {
+  margin-right: 10px;
+}

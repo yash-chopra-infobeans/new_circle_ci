@@ -1,0 +1,37 @@
+.sticky-header {
+  margin-top: 0px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0px;
+  }
+}
+
+.skip-link {
+  z-index: 3;
+  background: var(--skip-link--background-color);
+  color: var(--skip-link--font-color);
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform .3s;
+
+  // Changes top position based on wp admin bar
+  top: 0px;
+  body.admin-bar & {
+    top: 46px;
+
+    @include mq($from: wp-admin) {
+      top: 32px;
+    }
+  }
+
+  &:visited {
+    color: var(--skip-link--font-color);
+  }
+
+}
+
+.skip-link:focus {
+  transform: translateY(0%);
+}

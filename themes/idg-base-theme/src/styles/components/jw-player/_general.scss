@@ -1,0 +1,112 @@
+.jwplayer.jw-state-paused .jw-display {
+  display: table !important;
+  padding: 0;
+}
+
+.jw-flag-small-player .jw-display {
+  padding-top: 0px;
+}
+
+.jwplayer:not(.jw-flag-floating) .jw-display-icon-container .jw-icon-rewind {
+  visibility: hidden;
+}
+
+.jwplayer .jw-display-icon-container .jw-icon-next {
+  visibility: hidden;
+}
+
+.jwplayer .jw-display-icon-container .jw-icon,
+.jwplayer .jw-display-icon-container  .jw-icon-display .jw-svg-icon-play,
+.jw-state-idle .jw-svg-icon-play,
+.jwplayer .jw-display-icon-container  .jw-icon-display .jw-svg-icon-replay,
+.jw-state-complete .jw-svg-icon-replay {
+  height: 81px;
+  width: 78px;
+}
+
+.jwplayer {
+  margin-bottom: 24px !important;
+}
+
+.jwplayer.jw-flag-floating .jw-wrapper {
+  margin: 0;
+  max-width: 300px !important;
+  bottom: 0;
+
+  @include mq(tablet) {
+    max-width: 400px !important;
+    right: calc(50% - 600px) !important;
+  }
+
+  @include mq(desktop) {
+    right: calc(50% - 600px) !important;
+  }
+}
+
+// So we can see the close icon which is positioned outside the controls.
+.jwplayer.jw-flag-floating .jw-controls {
+  overflow: visible;
+}
+
+.jwplayer.jw-flag-floating .jw-float-icon .jw-svg-icon {
+  filter: none;
+}
+
+.jwplayer.jw-flag-floating .jw-float-icon {
+  display: inline-block !important;
+  color: var(--jw-player-close-btn-color);
+  top: -30px;
+  right: -15px;
+  pointer-events: all;
+  cursor: pointer;
+
+  &:enter {
+    color: var(--jw-player-close-btn-color) !important;
+    opacity: .5;
+  }
+}
+
+.jwplayer:not(#jwplayer--featuredVideo):not(#jwplayer--floatingVideo),
+#jwplayer--floatingVideo {
+  overflow: visible;
+  margin-top: 55px;
+}
+
+.jwplayer:not(#jwplayer--featuredVideo):not(#jwplayer--floatingVideo) .jw-wrapper::before,
+#jwplayer--featuredVideo.jwplayer.jw-flag-floating .jw-wrapper::before,
+#jwplayer--floatingVideo .jw-wrapper::before {
+  position: absolute;
+  top: -35px;
+  height: 35px;
+  line-height: 28px;
+  box-sizing: border-box;
+  text-transform: none;
+  background-color: #fff;
+  color: var(--jw-player-title-color);
+  padding: 4px;
+  padding-left: 8px;
+  width: 100%;
+  font-size: 20px;
+  border-top: 1px solid var(--jw-player-border-color);
+  border-left: 1px solid var(--jw-player-border-color);
+  border-right: 1px solid var(--jw-player-border-color);
+  display: inline-block;
+  content: " ";
+  background-size: auto 20px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+}
+
+#jwplayer--floatingVideo .jw-wrapper::before {
+  background-image: var(--jw-player-branding);
+}
+
+.jwplayer:not(#jwplayer--featuredVideo):not(#jwplayer--floatingVideo) .jw-wrapper::before,
+#jwplayer--featuredVideo.jwplayer.jw-flag-floating .jw-wrapper::before {
+  display: block;
+}
+
+// Stop the video time slider being visible outside of element
+.jw-slider-time {
+  overflow: hidden;
+}

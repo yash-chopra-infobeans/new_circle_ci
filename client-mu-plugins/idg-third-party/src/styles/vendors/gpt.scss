@@ -1,0 +1,123 @@
+/* Ad specific site modifications */
+.site-main {
+  position: relative;
+}
+
+.ad-banner.has-loaded + .site-main,
+.ad-banner.has-loaded + .layout--right-rail {
+  border-top: 1px solid var(--navigation-secondary--border-color);
+  border-bottom: 1px solid var(--navigation-secondary--border-color);
+  margin-top: 15px;
+}
+
+/* Global ad styles */
+.ad {
+  opacity: 0;
+  visibility: hidden;
+  height: 0px;
+  transform: translateY(-10%);
+  will-change: transform; // Give the browser a heads up.
+  transition: transform .4s cubic-bezier(.77, 0, .175, 1), opacity .5s cubic-bezier(.77, 0, .175, 1);
+}
+
+.ad.has-rendered {
+  visibility: visible;
+  height: auto;
+}
+
+.ad.has-loaded {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.page-ad {
+  position: relative;
+  text-align: center;
+}
+
+@media only screen and (min-width: 728px) {
+  .page-ad.is-sticky {
+    position: sticky !important;
+    top: 0; // This is handled in JS.
+    z-index: 1;
+  }
+
+  .ad-banner.is-sticky {
+    z-index: 2;
+  }
+}
+
+.has-ad-prefix.has-rendered,
+.has-ad-prefix.has-loaded {
+  padding-top: 34px;
+}
+
+.has-ad-prefix::before {
+  content: "advertisement";
+  position: absolute;
+  color: #878787;
+  text-transform: uppercase;
+  font-size: 10px;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Banner ad */
+.ad-banner {
+  margin: 0 auto;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, .85);
+  backdrop-filter: blur(6px);
+}
+
+.home .ad-banner {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 34px;
+}
+
+/* Right rail ad */
+.ad-right-rail {
+  height: 600px; // Default to enable lazy load.
+  top: 15px; // Overided if sticky behaviour kicks in.
+
+  @include mq($until: tablet) {
+    display: none;
+  }
+}
+
+.admin-bar .ad-right-rail {
+  top: 47px; // Overided if sticky behaviour kicks in.
+}
+
+/* Article ad */
+.ad-article {
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--navigation-secondary--border-color);
+  padding-bottom: 24px;
+  clear: both;
+  width: 100%;
+}
+
+.single-post .ad-article {
+  border-top: 1px solid var(--navigation-secondary--border-color);
+  width: auto;
+
+  @include mq("tablet") {
+    // Stretch to edges of .entry-content
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+}
+
+.single-post .ad-article.has-ad-prefix::before {
+  top: 4px;
+}
+
+/* Footer ad */
+.ad-footer {
+  margin: 0 auto;
+  width: 100vw;
+  margin-bottom: 15px;
+}

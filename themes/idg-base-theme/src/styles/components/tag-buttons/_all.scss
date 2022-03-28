@@ -1,0 +1,31 @@
+.tag-list {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: var(--base--font-family);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 40px;
+  clear: both;
+  margin-top: 20px;
+}
+
+.tag-list a {
+  color: var(--base--font-color);
+
+}
+
+.tag-list li {
+  display: inline-block;
+}
+
+.tag-button {
+  border-radius: 4px;
+  background-color: #e8e8e8;
+  margin: 5px;
+  padding: 8px;
+}
+
+.tag-button a {
+  text-decoration: none;
+}

@@ -1,0 +1,36 @@
+div[data-type="bigbite/multi-title"] {
+  padding: 0 40px;
+}
+
+.additional-fields__container {
+  padding: 0 15px;
+}
+
+div[data-type="bigbite/multi-title"] .components-text-control__input {
+  &:disabled {
+    border: 1px solid #d4d4d4 !important;
+    background-color: #ecedef;
+  }
+}
+
+.additional-fields__container {
+  textarea {
+    border: 1px solid #7e8993 !important;
+  }
+}
+
+.slug-group {
+  display: flex;
+  flex-direction: row;
+
+  .group-item {
+    &.text-input {
+      flex-grow: 4;
+    }
+  }
+
+  button.group-item {
+    margin-top: 25px;
+    margin-left: 5px;
+  }
+}

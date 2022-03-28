@@ -1,0 +1,51 @@
+# PHP CircleCI 2.0 configuration file.
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:  
+  build:
+    docker:
+      # Pick a base image which matches the version of Node you need for
+      # building from https://hub.docker.com/r/circleci/node/tags/
+      #
+      # Note: If using a different container, make sure it contains at least
+      # git 2.6.0. (Use -stretch for circleci/node containers.)
+      #- image: circleci/node:6.11-stretch # change version
+      #- image: cimg/node:12.18.2
+      - image: cimg/php:7.3-node
+      
+      #- image: circleci/php:7.3-node-browsers # need to check if need to change        
+    branches:
+      # Don't build from a branch with the `-built` suffix, to
+      # prevent endless loops of deploy scripts.
+      ignore:
+        - /^.*-built$/
+        - qa
+        - preprod
+        - master
+        - migration                   
+    steps:      
+      - checkout     
+      - restore_cache:
+          name: Restore node modules cache
+          key: node_modules-v2-{{ checksum "package.json" }}      
+      - save_cache:
+            name: Save dependancies cache
+            key: cache-v2-{{ checksum "package.json" }}
+            paths:
+              - ~/.npm
+              - ~/.cache
+              - ~/.composer/cache
+      
+      - run:
+          name: "Run builds" # change condition - Use IN
+          command: |
+            if [[ $CIRCLE_BRANCH == 'master' || $CIRCLE_BRANCH == 'preprod' || $CIRCLE_BRANCH == 'develop' || $CIRCLE_BRANCH == 'qa' || $CIRCLE_BRANCH == 'migration' ]] 
+            then
+              echo 'running create_build.sh ....Fetching from default branch'
+              ./private/bin/create_build.sh              
+            else
+              echo 'running build_changes.sh ....Fetching from other branches'
+              ./private/bin/run_pr_checks.sh              
+            fi   

@@ -1,0 +1,44 @@
+.post-legacy {
+
+  .embed-wrapper {
+    float: left;
+    margin: 0 1rem 10px 0;
+    width: 100%;
+
+    .embed-container {
+      max-width: 620px;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        cursor: pointer;
+      }
+    }
+
+    .embed-youtube {
+      max-width: 620px;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        cursor: pointer;
+      }
+    }
+  }
+
+}

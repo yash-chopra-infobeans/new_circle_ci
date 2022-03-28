@@ -1,0 +1,12 @@
+.btn--outline {
+  background: none;
+  color: var(--button-outline--font-color);
+  border: $base-border-size solid var(--button-outline--border-color);
+  border-radius: var(--button-outline--border-radius);
+
+  &:enter {
+    color: var(--button-outline--enter--font-color);
+    background-color: var(--button-outline--enter--border-color);
+    border-color: var(--button-outline--enter--background-color);
+  }
+}

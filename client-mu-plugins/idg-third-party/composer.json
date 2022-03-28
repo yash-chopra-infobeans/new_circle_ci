@@ -1,0 +1,23 @@
+{
+  "name": "idg/ads",
+  "description": "The ads plugin for IDG.",
+  "type": "wordpress-client-muplugin",
+  "version": "1.0.0-alpha.1",
+  "require-dev": {
+    "automattic/jetpack-autoloader": "^1"
+  },
+  "autoload": {
+    "files": [
+      "inc/asset-settings.php",
+      "inc/setup.php"
+    ],
+    "psr-4": {
+      "IDG\\Ads\\": "inc/"
+    },
+    "classmap": [ "inc/" ]
+  },
+  "scripts": {},
+  "config": {
+    "preferred-install": "dist"
+  }
+}

@@ -1,0 +1,40 @@
+.term-slug-wrap, .term-description-wrap {
+  display: none;
+}
+
+.country-selector {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.currency-selector-wrapper {
+  width: 95%;
+}
+
+.currency-input-wrapper {
+  background-color: #fff;
+  border-left: 1px solid #7e8993;
+  border-right: 1px solid #7e8993;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+}
+
+.currency-input-wrapper:nth-child(2) {
+  margin-top: 3px;
+  border-top: 1px solid #7e8993;
+}
+
+.currency-input-wrapper:last-child {
+  margin-bottom: 3px;
+  border-bottom: 1px solid #7e8993;
+}
+
+.currency-input-wrapper input {
+  margin: 0 6px 0 0;
+}
+
+.term-wrap-country p {
+  margin: 6px 0;
+}

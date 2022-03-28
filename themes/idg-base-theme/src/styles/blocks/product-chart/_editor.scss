@@ -1,0 +1,35 @@
+@import "./main";
+
+.product-chart-item {
+
+  &__title-wrapper {
+    display: flex;
+  }
+
+  &__rank {
+    margin-right: 10px;
+  }
+}
+
+.product-chart-item-product-data-settings {
+  .image-size-selector-wrapper {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .image-reset-btn {
+    margin-top: .5rem;
+  }
+
+  .title-reset-btn {
+    margin-right: 6px;
+  }
+
+  .rating-title {
+    margin-top: 1.5rem;
+  }
+}
+.select-review-btn {
+  display: block;
+  padding-top: 10px;
+}

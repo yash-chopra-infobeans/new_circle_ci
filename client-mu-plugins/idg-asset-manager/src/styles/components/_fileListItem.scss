@@ -1,0 +1,140 @@
+.fileItem {
+  box-sizing: border-box;
+}
+
+.fileItem .fileItem-type {
+  z-index: 1;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 28px;
+}
+
+.fileItem .fileItem-preview {
+  position: relative;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .05);
+  background: #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileItem .fileItem-preview::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.fileItem .fileItem-preview .fileItem-progressBar {
+  width: 100%;
+  height: 20px;
+  margin: 20px;
+  background-color: #dadada;
+}
+
+.fileItem .fileItem-preview .fileItem-progressBar .progressBar-inner {
+  height: 100%;
+  background-color: #b1b1b1;
+}
+
+.fileItem .fileItem-preview .fileItem-progressBar span {
+  position: absolute;
+  left: -999em;
+  width: 1em;
+  overflow: hidden;
+}
+
+.fileItem .fileItem-thumbnail {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity .1s;
+}
+
+.fileItem .fileItem-centered {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(50%, 50%);
+}
+
+.fileItem .fileImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.fileItem .fileDocument {
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.fileItem .fileDocument svg {
+  width: 100px;
+  height: 100px;
+}
+
+.fileItem .fileDocument span {
+  display: block;
+}
+
+.fileItem .fileDocument .documentIcon {
+  font-size: 54px;
+  display: initial;
+}
+
+.fileItem .fileItem-actions {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.fileItem .fileItem-actions > button {
+  display: none;
+}
+
+.fileItem .fileItem-actions > button:enter {
+  display: flex;
+}
+
+.fileItem .fileItem-actions .assetManager-selectIconBtn {
+  height: 24px;
+  width: 24px;
+  background-color: #eee;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(0, 0, 0, .15);
+  display: flex;
+  justify-content: center;
+}
+
+.fileItem .fileItem-actions button + button {
+  margin-left: 10px;
+}
+
+.fileItem.fileItem--errors .fileItem-thumbnail {
+  border: 2px solid #cd423b;
+}
+
+.fileItem.fileItem--isSelected .fileItem-thumbnail {
+  border: 2px solid #007cba;
+}
+
+.fileItem .fileItemDetails {
+  margin-top: 5px;
+  word-break: break-all;
+}
+
+.fileItem .fileItemDetails > span {
+  display: block;
+  font-size: 11px;
+}

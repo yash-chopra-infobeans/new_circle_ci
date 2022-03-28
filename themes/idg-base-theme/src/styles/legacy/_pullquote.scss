@@ -1,0 +1,94 @@
+.post-legacy {
+  .pullquote {
+    padding: 0 .625rem .25rem 2.75rem;
+    display: block;
+    clear: left;
+    margin: 0 0 1rem 0;
+    max-width: var(--pullquote--max-width);
+
+    q::before {
+      content: "“";
+      color: var(--pullquote--quotation-color);
+      line-height: 0;
+      font-size: var(--pullquote--quotation-font-size);
+      display: inline-block;
+      margin-left: -2rem;
+      position: relative;
+      vertical-align: text-bottom;
+      font-weight: var(--pullquote--quotation-font-weight);
+      padding-right: 10px;
+    }
+
+    q {
+      background-image: none;
+      color: var(--pullquote--text-color);
+      display: inline;
+      font-size: var(--pullquote--text-font-size);
+      line-height: 36px;
+      margin: 0;
+      padding-left: .375rem;
+      quotes: none;
+    }
+
+    cite {
+      display: block;
+      margin-top: .5rem;
+      text-align: left;
+      color: var(--pullquote--cite-color);
+      font-size: var(--pullquote--cite-font-size);
+      font-style: italic;
+      letter-spacing: 0;
+      line-height: 24px;
+
+      &::before {
+        content: "\2014 \2009";
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &-with-image {
+      &::before {
+        content: "";
+      }
+
+      figure {
+        float: left !important;
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+        max-width: 150px;
+        width: 150px !important;
+
+        img {
+          width: 100% !important;
+          height: auto;
+          margin-bottom: 1rem;
+        }
+      }
+
+      q {
+        color: var(--pullquote--text-color);
+        font-size: var(--pullquote--text-font-size);
+        line-height: 36px;
+        padding-left: 42px;
+
+        &::before {
+          content: "“";
+          color: var(--pullquote--quotation-color);
+          line-height: 0;
+          font-size: var(--pullquote--quotation-font-size);
+          display: inline-block;
+          margin-left: -2rem;
+          position: relative;
+          vertical-align: text-bottom;
+          font-weight: var(--pullquote--quotation-font-weight);
+          padding-right: 10px;
+        }
+      }
+
+      cite {
+        padding-left: 150px;
+      }
+    }
+  }
+}

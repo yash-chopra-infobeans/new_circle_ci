@@ -1,0 +1,15 @@
+.cf-message {
+  display: flex;
+  align-items: center;
+}
+
+.cf-messageIcon {
+  color: $wp-grey-dark-100;
+}
+
+.cf-messageText {
+  margin-left: 10px;
+  font-size: 12px;
+  font-family: $font-system-ui;
+  color: $wp-grey-dark-800;
+}

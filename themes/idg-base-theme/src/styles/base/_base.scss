@@ -1,0 +1,45 @@
+/**
+ * Apply box-sizing here, then inherit.
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  min-height: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/**
+ * Page level styles.
+ *
+ * 1. Use advanced typographic features included in some OpenType fonts. Only enable if
+ *    font supports it.
+ * 2. Prevent certain mobile browsers from automatically zooming fonts.
+ * 3. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+body {
+  font-size: $base-font-size;
+  font-family: var(--base--font-family);
+  line-height: $line-height-ratio;
+  color: var(--base--font-color);
+  // font-feature-settings: "kern", "liga", "pnum"; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -moz-osx-font-smoothing: grayscale;   /* 3 */
+  -webkit-font-smoothing: antialiased; /* 3 */
+}
+
+/**
+ * Container set up.
+ */
+.container {
+  display: block;
+  width: 100%;
+  max-width: $flexy-container;
+  margin: 0 auto;
+  padding: 0 $flexy-outer-gutter;
+}

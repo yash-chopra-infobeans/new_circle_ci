@@ -1,0 +1,23 @@
+body.cf {
+  background: #fff;
+}
+
+.cf-section:not(:only-child):not(:last-child) {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid $wp-grey-light-200;
+}
+
+.cf-fieldGroup:not(:only-child):not(:last-child) {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid $wp-grey-light-200;
+}
+
+.cf-fieldsContainer {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}

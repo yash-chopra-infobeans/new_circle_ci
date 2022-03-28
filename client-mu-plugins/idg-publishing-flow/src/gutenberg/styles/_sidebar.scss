@@ -1,0 +1,20 @@
+.block-editor-page {
+
+  /* Hide "Pending Review" option. */
+  .components-panel__row:nth-child(5) {
+    display: none;
+  }
+}
+
+.edit-post-post-schedule {
+  flex-wrap: wrap;
+}
+
+.components-panel__row.edit-post-post-schedule > * {
+  width: 45%;
+}
+
+.components-panel__row.edit-post-post-schedule .edit-post-post-schedule-hint {
+  color: #ff8c00;
+  width: 100%;
+}

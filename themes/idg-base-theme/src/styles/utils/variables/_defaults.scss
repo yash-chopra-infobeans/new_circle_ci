@@ -1,0 +1,78 @@
+// This file uses spacing to align, disable disalowing more than 1 space after colon.
+/* stylelint-disable declaration-colon-space-after */
+/* stylelint-disable declaration-bang-space-before */
+
+////
+/// @group Defaults
+/// @type Number (Unit)
+////
+
+/// Enable flexbox components.
+/// @type Bool
+$enable-flexbox: true !default;
+
+/// Sets the base font size.
+$base-font-size:   16px !default;
+
+/// Sets the base line height.
+$base-line-height: 20px !default;
+
+/// Heading sizes
+$header-sizes: (
+  h1: 6ms,
+  h2: 5ms,
+  h3: 4ms,
+  h4: 3ms,
+  h5: 2ms,
+  h6: 1ms,
+);
+
+/// Weights for primary font
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+/// `.milli`.
+$milli-size: -1ms;
+
+//
+// Misc. variables.
+//
+
+/// Unitless line-height ratio (e.g 16px/24px = 1.5)
+/// @require $base-line-height
+/// @require $base-font-size
+/// @access private
+$line-height-ratio: $base-line-height / $base-font-size;
+
+/// Spacing for vertical rhythm based off the line-height.
+/// @group Defaults
+/// @require $base-line-height
+/// @see {function} spacing
+/// @example scss - Use modifiers for easy sizing adjustments.
+/// .foo {
+///   margin-top:    $spacing-unit;
+///   margin-bottom: $spacing-unit--double;
+///   margin-left:   $spacing-unit--half;
+/// }
+$spacing-unit: $base-line-height !default;
+
+/// Double `$spacing-unit`.
+$spacing-unit--double:  round($spacing-unit * 2);
+
+/// Half `$spacing-unit`.
+$spacing-unit--half:    round($spacing-unit / 2);
+
+/// Half `$spacing-unit`.
+$spacing-unit--quad:    round($spacing-unit * 4);
+
+/// Half `$spacing-unit`.
+$spacing-unit--quarter: round($spacing-unit / 4);
+
+/// Global border radius.
+$base-border-radius: 4px !default;
+
+/// Global border size.
+$base-border-size: 2px !default;
+
+/// Block spacing.
+$block-spacer: 32px;

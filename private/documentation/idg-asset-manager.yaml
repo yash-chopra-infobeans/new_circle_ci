@@ -1,0 +1,346 @@
+openapi: 3.0.1
+info:
+  title: IDG
+  description: This is for IDG WordPress project
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: paul@bigbite.net
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://idg.bigbite.site/wp-json/idg/v1
+  - url: https://idg.bigbite.site/wp-json/idg/v1
+tags:
+  - name: "Asset Manager"
+    description: endpoints for creating, updating and deleting assets.
+    externalDocs:
+      description: Find out more about our store
+      url: http://swagger.io
+paths:
+  /assets:
+    description: "For the asset manager"
+    post:
+      tags:
+      - "Asset Manager"
+      summary: Upload a single asset(file) and store record in database
+      operationId: create_item
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/assetPOST'
+        required: true
+      responses:
+        200:
+          description: Stored succesfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse200'
+        400:
+          description: Invalid input.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse400'
+        500:
+          description: Internal Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse500'
+  /assets/{id}:
+    get:
+      description: Get asset data for the passed ID.
+      operationId: getItem
+      parameters:
+        - name: id
+          in: path
+          description: Asset ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Retreived succesfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse200'
+        404:
+          description: Asset to be deleted cannot be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse404'
+        500:
+          description: Internal Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse500'
+    post:
+      description:  Update an asset.
+      operationId: updateItem
+      parameters:
+        - name: id
+          in: path
+          description: Asset ID
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/assetPUT'
+      responses:
+        200:
+          description: Updated succesfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse200'
+        404:
+          description: Asset to be deleted cannot be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse404'
+        500:
+          description: Internal Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse500'
+    delete:
+      description: Delete an asset (this includes any related files)
+      operationId: deleteItem
+      parameters:
+        - name: id
+          in: path
+          description: Asset ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Deleted succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deleteAssetResponse200'
+        404:
+          description: Asset to be deleted cannot be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse404'
+        500:
+          description: Internal Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/assetResponse500'
+components:
+  schemas:
+    assetPOST:
+      type: object
+      properties:
+        file:
+          type: string
+          format: binary
+        asset_author:
+          type: integer
+        asset_caption:
+          type: string
+        asset_alt:
+          type: string
+        asset_rights:
+          type: string
+        asset_source:
+          type: string
+        asset_credit:
+          type: string
+        asset_publication:
+          type: string
+        asset_status:
+          type: string
+        asset_active:
+          type: boolean
+        import_id:
+          type: integer
+        tax_input:
+          type: array
+          items:
+            type: integer
+          example: [1, 2, 3]
+        meta_input:
+          type: array
+          items:
+            type: integer
+          example: [1, 2, 3]
+    assetPUT:
+      type: object
+      properties:
+        asset_author:
+          type: integer
+        asset_caption:
+          type: string
+        asset_alt:
+          type: string
+        asset_rights:
+          type: string
+        asset_source:
+          type: string
+        asset_credit:
+          type: string
+        asset_publication:
+          type: string
+        asset_status:
+          type: string
+        asset_active:
+          type: boolean
+        import_id:
+          type: integer
+        tax_input:
+          type: array
+          items:
+            type: integer
+          example: [1, 2, 3]
+        meta_input:
+          type: array
+          items:
+            type: integer
+          example: [1, 2, 3]
+    assetResponse200:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        data:
+          type: object
+          description: A list of the expected payload properties.
+          properties:
+            asset_author:
+              type: integer
+              example: 0
+            asset_title:
+              type: string
+              example: test
+            asset_name:
+              type: string
+              example: test
+            guid:
+              type: string
+              example: https://idg.bigbite.site/wp-content/uploads/s3/idg-poc/uploads/2020/07/test.jpg
+            assset_file:
+              type: string
+              example: /2020/07/test-50.jpg
+            asset_metadata:
+              type: string
+              example: jljlkj
+            asset_mime_type:
+              type: string
+              example: image/jpeg
+            asset_caption:
+              type: string
+              example: Caption related to uploaded image
+            asset_alt:
+              type: string
+              example: Alt text to provide context for screen readers
+            asset_rights:
+              type: string
+              example: test
+            asset_source:
+              type: string
+              example: Apple
+            asset_credit:
+              type: string
+              example: John Smith
+            asset_publication:
+              type: string
+              example: MacWorld.com
+            asset_status:
+              type: string
+              example: publish
+            asset_active:
+              type: boolean
+              example: 1
+            import_id:
+              type: integer
+              example: 10
+            tax_input:
+              type: array
+              items:
+                type: integer
+              example: [1, 2, 3]
+            meta_input:
+              type: array
+              items:
+                type: integer
+              example: [4, 5, 6]
+            asset_date:
+              type: string
+              example: '2020-07-31 11:22:08'
+            asset_date_gmt:
+              type: string
+              example: '2020-07-31 11:22:08'
+            asset_modified:
+              type: string
+              example: '2020-07-31 11:22:08'
+            asset_modified_gmt:
+              type: string
+              example: '2020-07-31 11:22:08'
+    deleteAssetResponse200:
+          type: object
+          properties:
+            status:
+              type: integer
+              example: 200
+            data:
+              type: boolean
+              description: return true if asset was successfully deleted
+    assetResponse400:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 400
+        errors:
+          type: object
+          description: A list of the expected payload properties.
+          properties:
+            content:
+              type: array
+              items:
+                type: string
+                example: The content field is required
+    assetResponse404:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 404
+        errors:
+          type: object
+          description: A list of the expected payload properties.
+          properties:
+            content:
+              type: array
+              items:
+                type: string
+                example: Invalid asset id.
+    assetResponse500:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 500
+        errors:
+          type: string
+          description: Error message.
+          example: Internal Server Error.

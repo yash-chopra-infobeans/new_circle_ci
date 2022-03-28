@@ -1,0 +1,114 @@
+.assetManager-modal {
+  width: 100%;
+  height: 100%;
+}
+
+.assetManager-modal.components-modal__frame,
+.assetManager-modal .components-modal__content {
+  overflow: hidden;
+}
+
+.assetManager-modal .components-modal__header {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.assetManager-modal .assetManager-viewFooter {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eaebeb;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.assetManager-modal .assetManager-viewFooter .assetManager-pagination {
+  border: none;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.assetManager-modal.assetManager--hasSelected .assetManagerModal-grid {
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  grid-gap: 20px;
+}
+
+.assetManager-modal.assetManager--hasSelected .filesList {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.assetManager-uploadForm {
+  @include mq(desktop) {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 4fr;
+  }
+}
+
+.assetManagerModal-insertBar Button + Button {
+  margin-left: 10px;
+}
+
+.assetManagerModal-file .assetFile-Preview {
+  padding-right: 0px;
+  border-right: none;
+}
+
+.assetManager-modal .vhScroll {
+  @include mq(desktop) {
+    height: calc(100vh - 275px);
+  }
+}
+
+.assetManagerModal-headerContent {
+  flex: 1 1 auto;
+  margin: 0 20px;
+}
+
+.fileListItem-upload .dropzone {
+  margin-bottom: 0px;
+  height: 100%;
+}
+
+.assetManager-modal .searchTopbar {
+  margin-top: 0px;
+}
+
+.assetManager-modal .assetFile-Preview,
+.assetManager-modal .fileForm {
+  height: calc(100vh - 205px);
+  overflow: auto;
+  padding: 1px 1px 20px 1px;
+}
+
+.assetManager-modal .assetManager-main .files,
+.assetManager-modal .searchSidebar .searchSidebar-content {
+  height: calc(100vh - 370px);
+  overflow: auto;
+  padding: 1px 1px 20px 1px;
+}
+
+.assetManager-modal .searchSidebar .searchSidebar-content {
+  height: calc(100vh - 212px);
+}
+
+.disabled-button-error-message {
+  color: #cd423b;
+}
+
+.error-msg-container {
+  position: relative;
+  padding-top: 5px;
+  background-color: #ecb3b3;
+}
+
+.hide-error-message {
+  position: absolute;
+  right: -5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  top: -5px;
+}

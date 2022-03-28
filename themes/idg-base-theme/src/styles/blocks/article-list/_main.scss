@@ -1,0 +1,236 @@
+.articleFeed {
+  font-family: var(--base--font-family);
+  width: 100%;
+  position: relative;
+
+  // Block Level Margin
+  margin-bottom: $block-spacer;
+}
+
+.articleFeed-inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: 0px  solid var(--articleFeed--border-color);
+}
+
+.articleFeed .item {
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 24px 0;
+  border-bottom: 1px  solid var(--articleFeed--border-color);
+}
+
+.articleFeed .item-inner {
+  display: flex;
+  width: 100%;
+}
+
+.articleFeed .item-image {
+  margin-right: 16px;
+}
+
+.articleFeed .item-image.item-image--video {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgba($color: #000, $alpha: .5);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    background-image: url("../../../static/icons/play.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
+  }
+}
+
+.articleFeed .item-image img {
+  display: block;
+  max-width: 141px;
+
+  @include mq("tablet") {
+    max-width: 200px;
+  }
+}
+
+.articleFeed .item h3 {
+  margin: 0;
+}
+
+.articleFeed .item .item-excerpt {
+  margin-top: 10px;
+  color: var(--articleFeed--meta--font-color);
+}
+
+.articleFeed .item .item-meta {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--articleFeed--meta--font-color);
+}
+
+.articleFeed .item .item-byline {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.articleFeed .item .item-date {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.articleFeed .item .item-score {
+  height: 15px;
+  display: inline-block;
+}
+
+.articleFeed .item .item-score .starRating {
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: 15px;
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "★★★★★";
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #e42e22 var(--percent), #f3f5f6 var(--percent));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.articleFeed-button {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.articleFeed-button .btn {
+  max-width: 380px;
+  width: 100%;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+@include mq($until: mobile) {
+  .articleFeed--list {
+    .item-inner {
+      flex-direction: row-reverse;
+    }
+    .item-text {
+      flex-grow: 1;;
+    }
+    .item-image {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+    .item-excerpt {
+      display: none;
+    }
+  }
+}
+
+/**
+ * List layout.
+ */
+.articleFeed--list .articleFeed-inner > .item:first-of-type {
+  padding-top: 0;
+}
+
+/**
+ * Grid layout.
+ */
+.articleFeed--grid {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+
+  // Block Level Margin
+  margin-bottom: $block-spacer - 24px;  // Each item has 24px margin too allow for grid.
+
+  .articleFeed-inner {
+    justify-content: flex-start;
+    border-top-width: 0px;
+  }
+
+  .item {
+    flex-grow: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    border-bottom-width: 0px;
+    margin-right: 20px;
+
+    width: calc(50% - 15px);
+
+    @include mq($until: mobile) {
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+
+    @include mq($from: mobile, $until: tablet) {
+      width: calc(33% - 15px);
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+
+    @include mq("tablet") {
+      width: calc(25% - 15px);
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include mq($from: mobile, $until: tablet) {
+    // Hide items on tablet when not multiple of 3
+    @for $i from 0 through 20 {
+      @if $i % 4 == 0 {
+        .articleFeed-#{$i} .item:nth-child(#{$i}) {
+          display: none;
+        }
+      }
+
+      @if $i % 5 == 0 {
+        .articleFeed-#{$i} .item:nth-child(#{$i}) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .item-inner {
+    flex-direction: column;
+  }
+
+  .item-image {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  .item-image img {
+    max-width: 100%;
+  }
+}

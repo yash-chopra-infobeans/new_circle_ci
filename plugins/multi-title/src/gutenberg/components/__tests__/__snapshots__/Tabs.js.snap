@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> should render with errors 1`] = `
+<div>
+  <Fill
+    name="PluginPrePublishPanel"
+  >
+    <ForwardRef(PanelBody)
+      title="Errors"
+    >
+      <div
+        className="publishErrors-section"
+      >
+        <p>
+          <strong>
+            SEO
+          </strong>
+        </p>
+        <ul>
+          <li>
+            You have exceeded the maximum character limit.
+          </li>
+        </ul>
+      </div>
+    </ForwardRef(PanelBody)>
+  </Fill>
+  <WithInstanceId(TabPanel)
+    activeClass="active-tab"
+    className="title-tab-panel"
+    onSelect={[MockFunction]}
+    tabs={Array []}
+  >
+    <Component />
+  </WithInstanceId(TabPanel)>
+  <Slot
+    name="multi-title-below-tabs"
+  />
+</div>
+`;
+
+exports[`<Tabs /> should render without errors 1`] = `
+<div>
+  <WithInstanceId(TabPanel)
+    activeClass="active-tab"
+    className="title-tab-panel"
+    onSelect={[MockFunction]}
+    tabs={Array []}
+  >
+    <Component />
+  </WithInstanceId(TabPanel)>
+  <Slot
+    name="multi-title-below-tabs"
+  />
+</div>
+`;

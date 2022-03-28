@@ -1,0 +1,23 @@
+.assetManager-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eaebeb;
+  margin-bottom: 20px;
+}
+
+.assetManager-header .assetManager-headerContent {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+.assetManager-header h1 {
+  font-size: 23px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.assetManager-header h1 + Button,
+.assetManager-header Button + Button {
+  margin-left: 15px;
+}

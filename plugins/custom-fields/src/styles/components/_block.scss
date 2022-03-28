@@ -1,0 +1,10 @@
+.wp-block[data-type="cf/block"] {
+  margin-top: 0;
+  background: #fff;
+  max-width: 600px;
+  padding: 30px;
+}
+
+body:not(.block-editor-page) .wp-block[data-type="cf/block"]::after {
+  display: none;
+}

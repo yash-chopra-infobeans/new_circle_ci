@@ -1,0 +1,71 @@
+.productData {
+  margin-bottom: 10px;
+  background-color: $wp-grey-light-100;
+  border-top: 1px solid $wp-grey-light-800;
+  padding: 10px;
+}
+
+.productData-list {
+  margin: 0;
+}
+
+.productData-title {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 13px;
+  width: 100%;
+}
+
+.productData-key,
+.productData-item .productData-title {
+  padding-left: 0;
+}
+
+.productData-key::after {
+  content: ": ";
+}
+
+ul.productData-list ul.productData-list {
+  list-style-type: circle;
+  padding-left: 1.5em;
+}
+
+ul.productData-list ul.productData-list .productData-key,
+ul.productData-list ul.productData-list .productData-title {
+  margin-left: -.25em;
+  font-weight: 300;
+}
+
+ul.productData-list ul.productData-list .productData-item {
+  margin: 10px 0;
+}
+
+.productData-arrayItem {
+  list-style-type: decimal;
+  font-size: 13px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.productData-content {
+  font-size: 13px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.productData-tabs .components-tab-panel__tabs {
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+}
+
+.productData-tabs .components-tab-panel__tabs-item {
+  height: 34px;
+  font-size: 12px;
+  color: $wp-grey-dark-500;
+}
+
+.productData-tabs .components-tab-panel__tabs-item.productData-activeTab {
+  color: $wp-grey-dark-800;
+  box-shadow: inset 0 1px $wp-blue;
+}

@@ -1,0 +1,162 @@
+.tab-navigation {
+  background-color: var(--tab-navigation--background-color);
+  flex: 1;
+  display: flex;
+  padding: 10px 0 0 0;
+  margin-bottom: 24px;
+  font-family: var(--tab-navigation--font-family);
+  font-size: 14px;
+  border-bottom: 1px solid var(--tab-navigation--default--border-color);
+}
+
+.tab-group {
+  position: relative;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  z-index: 1;
+  visibility: hidden;
+  cursor: pointer;
+
+  &:hover span {
+    color: var(--tab-navigation--text-hover--font-color) !important;
+    background-color: var(--tab-navigation--text-hover--background-color);
+    border-radius: var(--tab-navigation--text-hover--border-radius);
+
+    svg path {
+      fill: var(--tab-navigation--text-hover--font-color);
+    }
+  }
+}
+
+.tab-group span {
+  padding: 5px 10px;
+  color: var(--tab-navigation--font-color);
+  font-family: var(--tab-navigation--font-family);
+}
+
+.tab-more-open-button {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.tab-more-open-button svg {
+  width: 8px;
+
+  // Animates rotation
+  transition: transform .5s ease;
+}
+
+.tab-group:hover .tab-more-open-button svg {
+  // Rotated when menu is open
+  transform: rotate(180deg);
+}
+
+.tab-group:hover .tab-group-items-wrapper {
+  display: block;
+}
+
+.tab-group-items-wrapper {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  &:hover {
+    display: block;
+  }
+}
+
+.tab-group-items {
+  padding-top: 20px;
+  background-color: var(--tab-navigation--group--background-color);
+  border: 1px solid var(--tab-navigation--default--border-color);
+  border-radius: 2px;
+  min-width: 235px;
+  z-index: 1;
+}
+
+.tab-group-items .tab-item {
+  padding: 5px 0;
+}
+
+.tab-group-items .tab-item a {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  display: inline-block;
+  white-space: nowrap;
+
+  svg {
+    height: 20px;
+    padding-top: 5px;
+  }
+}
+
+.tab-group-items .tab-item a:last-child {
+  padding-bottom: 20px;
+}
+
+.tab-group-items .tab-item:not(.tab-item-btn).active a {
+  border-left: 4px solid var(--tab-navigation--active--border-color);
+  font-weight: bold;
+}
+
+.tab-items {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  min-width: 100px;
+}
+
+.tab-items .tab-item {
+  list-style: none;
+  padding-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &.last-tab-item {
+    margin-right: 0;
+  }
+
+  svg {
+    height: 20px;
+    padding-top: 5px;
+    margin-top: -10px;
+  }
+}
+
+.tab-items .tab-item:not(.tab-item-btn).active {
+  border-bottom: 4px solid var(--tab-navigation--active--border-color);
+  font-weight: bold;
+  margin-bottom: -1px;
+}
+
+.tab-item a {
+  color: var(--tab-navigation--font-color) !important;
+  padding: 5px 10px;
+
+  &:hover {
+    color: var(--tab-navigation--text-hover--font-color) !important;
+    background-color: var(--tab-navigation--text-hover--background-color);
+    border-radius: var(--tab-navigation--text-hover--border-radius);
+  }
+}
+
+.tab-item-btn a {
+  background-color: var(--tab-navigation--button--background-color);
+  border-radius: var(--tab-navigation--button--border-radius);
+  color: var(--tab-navigation--button--font-color) !important;
+
+  &:hover {
+    background-color: var(--tab-navigation--button--hover--background-color) !important;
+    color: var(--tab-navigation--button--hover--font-color) !important;
+  }
+}
+
+@import "./editor";

@@ -1,0 +1,28 @@
+article.post {
+
+  pre {
+    > code {
+      border: 1px solid #e8e8e8;
+      font-family: Monaco, monospace;
+      font-size: 16px;
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #fdfdfd;
+      padding: 20px;
+      line-height: 22px;
+      overflow-x: auto;
+      white-space: pre;
+      width: 100%;
+    }
+  }
+
+  code {
+    font-family: Monaco, monospace;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: #e8e8e8;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+  
+}

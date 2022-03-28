@@ -1,0 +1,215 @@
+.wp-block-bigbite-postlist {
+  border: 1px solid #1e1e1e;
+  background-color: #fff;
+  width: 100%;
+
+  .title-wrapper {
+    padding: 10px;
+  }
+
+  .post-selectorHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #1e1e1e;
+  }
+
+  .post-selectorHeader .searchbox label,
+  .post-selectorHeader .searchbox {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .post-selectorHeader .searchbox svg {
+    width: 25px;
+    height: 25px;
+    fill: #777;
+  }
+
+  .post-selectorHeader input {
+    width: 100%;
+    margin-left: 8px;
+  }
+
+  .post-selectorHeader input {
+    border-radius: 0;
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+    max-height: none;
+    height: auto;
+    background-color: transparent;
+    transition: all .25s ease-in-out;
+    border-bottom: 2px solid transparent;
+  }
+
+  .post-selectorHeader select {
+    margin-left: 14px;
+    background-color: #fff;
+  }
+
+  .post-selectorHeader input:focus {
+    box-shadow: none;
+    border-bottom: 2px solid #11a0d2;
+  }
+
+  .post {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .post .editor-block-icon .dashicons-plus {
+    margin-top: 4px;
+  }
+
+  .post-figure {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+    flex-shrink: 0;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .post-title {
+    margin: 0;
+    line-height: .8;
+    font-size: 14px;
+  }
+
+  .post-meta {
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(85, 93, 102);
+  }
+
+  .post-selectorContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .post-list {
+    flex-basis: 50%;
+    padding: 0 20px;
+    max-height: 232px;
+    height: 232px;
+    overflow-y: auto;
+  }
+
+  .post {
+    padding: 10px 50px 10px 10px;
+    background-color: #fff;
+    border: 1px solid #1e1e1e;
+  }
+
+  .post button.button-action {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    right: 10px;
+    min-width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e1e1e;
+    border-radius: 2px;
+    color: #fff;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: color .2s ease;
+
+    span {
+      height: 14px;
+    }
+  }
+
+  .post-selectorRemove {
+    .post button.button-action {
+      background: #c92c2c;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  .button-directions {
+    margin: auto 8px auto 0px;
+
+    button {
+      padding: 0 !important;
+      margin: 0 2px;
+      min-width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #1e1e1e;
+      border-radius: 2px;
+      color: #fff;
+      transform: translate(0, -50%);
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: color .2s ease;
+
+    }
+  }
+
+  .post-selectorRemove,
+  .post-selectorAdd {
+    width: 50%;
+  }
+
+  .post-selectorAdd > p,
+  .post-selectorRemove > p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .post-selectorAdd {
+    border-right: 1px solid #000;
+  }
+
+  .post-list > button {
+    background-color: #11a0d2;
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    color: #fff;
+    margin-bottom: 8px;
+    transition: all .25s ease-in-out;
+  }
+
+  .post-list > button:not([disabled]):hover,
+  .post-list > button:not([disabled]):focus,
+  .post-list > button:not([disabled]):active {
+    background-color: #009cbd;
+  }
+
+  .post-list > button[disabled] {
+    opacity: .7;
+  }
+
+  .blocks-plain-text {
+    line-height: 1.8;
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+}

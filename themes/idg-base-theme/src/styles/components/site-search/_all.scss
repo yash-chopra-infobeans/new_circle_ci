@@ -1,0 +1,143 @@
+#siteSearch {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 16px 15px 0px rgba(0, 0, 0, .31);
+
+  visibility: hidden;
+  opacity: 0;
+  body.siteSearch--is-open & {
+    // On screen when site search is open
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .siteSearch-wrap {
+    padding: 30px 20px 100px 20px;
+    margin: 0 auto;
+    max-width: 1200px + 40px; // Adds left & right padding
+
+    @include mq("mobile") {
+      padding: 50px 20px 130px 20px;
+    }
+  }
+
+  .siteSearch-help-text {
+    display: none;
+    font-size: 20px;
+    color: #4a4a4a;
+    font-weight: 700;
+
+    @include mq("mobile") {
+      display: inline;
+    }
+  }
+
+  .gsc-search-button,
+  .gsst_b {
+    display: none;
+  }
+
+  input.gsc-input,
+  .gsc-input-box,
+  .gsc-input-box-hover,
+  .gsc-input-box-focus {
+    border-width: 0px;
+    border-bottom: 1px solid #979797;
+    font-size: 24px;
+    font-weight: 300;
+
+    @include mq("mobile") {
+      font-size: 48px;
+      font-weight: 700;
+    }
+  }
+
+  .gsc-input-box {
+    border-bottom-left-radius: 0px;
+  }
+
+  input.gsc-input::placeholder {
+    color: #a4a4a4;
+    font-size: 24px;
+    font-weight: 300;
+
+    @include mq("mobile") {
+      font-size: 48px;
+      font-weight: 700;
+    }
+  }
+
+  .gsib_a {
+    padding: 10px 0px;
+
+    @include mq("mobile") {
+      padding: 20px 0px;
+    }
+  }
+}
+
+.siteSearch-close {
+  text-align: right;
+  margin-bottom: 27px;
+}
+
+.siteSearch-close svg {
+  width: 26px;
+  height: 26px;
+}
+
+.gssb_e {
+  box-shadow: none !important;
+}
+
+table.gsc-search-box td.gsc-input {
+  padding-right: 0 !important;
+}
+
+.gssb_c {
+  margin-top: 50px;
+  width: 100% !important;
+  left: 0 !important;
+  background-color: white;
+  box-shadow: 0px 16px 15px 0px rgba(0, 0, 0, .31) !important;
+
+  @include mq("mobile") {
+    margin-top: 30px;
+  }
+}
+
+.gsc-completion-container {
+  padding: 0px 20px 100px 20px;
+  margin: 20px auto 0px auto !important;
+  max-width: 1200px + 40px; // Adds left & right padding
+  border-width: 0px !important;
+  font-size: 16px !important;
+  box-shadow: none !important;
+  font-weight: 300;
+  color: #4a4a4a;
+
+  @include mq("mobile") {
+    padding: 0px 20px 130px 20px;
+    font-size: 20px !important;
+  }
+
+  b {
+    font-weight: 700;
+  }
+
+  td div {
+    padding: 5px 12px;
+    cursor: pointer;
+
+    @include mq("mobile") {
+      padding: 10px 20px;
+    }
+  }
+}
+
+.gsc-completion-selected {
+  background: #e5f2fa !important;
+}

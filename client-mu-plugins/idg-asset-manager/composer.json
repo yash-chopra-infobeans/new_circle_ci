@@ -1,0 +1,32 @@
+{
+  "name": "idg/plugin-assets",
+  "description": "The starter skeleton for plugins being created on the IDG project.",
+  "type": "wordpress-client-muplugin",
+  "version": "1.0.0-alpha.1",
+  "require": {
+    "rakit/validation": "^1.2",
+    "enshrined/svg-sanitize": "^0.13.3",
+    "jwplayer/jwplatform": "^1.7",
+    "firebase/php-jwt": "^5.2"
+  },
+  "require-dev": {
+    "automattic/jetpack-autoloader": "^1"
+  },
+  "autoload": {
+    "files": [
+      "inc/asset-settings.php",
+      "inc/setup.php",
+      "inc/utils.php"
+    ],
+    "psr-4": {
+      "IDG\\": "inc/"
+    },
+    "classmap": [
+      "inc/"
+    ]
+  },
+  "scripts": {},
+  "config": {
+    "preferred-install": "dist"
+  }
+}

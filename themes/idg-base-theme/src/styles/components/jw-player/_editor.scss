@@ -1,0 +1,22 @@
+.jwplayer-videoTitle {
+  line-height: 28px;
+  box-sizing: border-box;
+  text-transform: none;
+  background-color: #fff;
+  color: var(--jw-player-title-color);
+  padding: 4px;
+  padding-left: 8px;
+  width: 100%;
+  font-size: 20px;
+  border-top: 1px solid var(--jw-player-border-color);
+  border-left: 1px solid var(--jw-player-border-color);
+  border-right: 1px solid var(--jw-player-border-color);
+}
+
+.jwplayer {
+  margin-top: 0px !important;
+}
+
+.jw-wrapper::before {
+  display: none !important;
+}

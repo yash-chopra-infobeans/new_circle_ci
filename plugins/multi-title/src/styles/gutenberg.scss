@@ -1,0 +1,156 @@
+@import "./revisions";
+
+.plugin-sidebar-content {
+  padding: 16px;
+}
+
+.plugin-sidebar-content .components-toggle-control {
+  padding-top: 5px;
+}
+
+.hidden-block * {
+  max-width: none;
+}
+
+.wp-block.is-selected[data-type="bigbite/multi-title"] textarea:not(:focus),
+.wp-block.is-hovered[data-type="bigbite/multi-title"] textarea:not(:focus) {
+  color: #191e23;
+  border-color: #e2e4e7;
+  box-shadow: 0 0 0 1px #e2e4e7;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+}
+
+.title-tab-panel > .components-tab-panel__tabs {
+  margin-bottom: 5px;
+}
+
+.editor-post-title {
+  display: none;
+
+  &.display {
+    display: block;
+  }
+}
+
+.title-tab-panel {
+  padding-bottom: 10px;
+}
+
+.title-tab-panel .tab {
+  border: none;
+  background: none;
+  margin-bottom: -1px;
+  padding: 10px 14px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active-tab {
+    border-bottom: 3px solid #007cba;
+  }
+
+  &:not(.active-tab) {
+    color: #b5bcc2;
+  }
+
+  &:focus,
+  &.active-tab:focus {
+    outline: none;
+  }
+}
+
+.tabbed-title {
+  padding: 0 !important;
+  margin-bottom: 15px;
+
+  .wp-block.editor-post-title__block {
+    padding: 0 !important;
+  }
+}
+
+.wp-block[data-type="bigbite/multi-title"] .wrappedInput {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.wrappedInput textarea,
+textarea.title-input-sm {
+  font-family: TimesModern-Bold, "Times New Roman", Times, serif;
+  font-size: 2.8125rem !important;
+  line-height: 2.9125rem !important;
+  padding: 10px;
+  font-weight: normal;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  resize: none;
+  border: none;
+}
+
+textarea.title-input-sm {
+  font-size: 1.2125rem !important;
+  line-height: 1.3125rem !important;
+  padding: 5px 10px !important;
+  width: 100%;
+}
+
+.wrappedInput .components-base-control__field {
+  margin-bottom: 0px !important;
+}
+
+.wrappedInput .wrappedInput-charLimit {
+  opacity: 0;
+}
+
+.wrappedInput.charLimit--visible .wrappedInput-charLimit {
+  opacity: 1;
+}
+
+.wrappedInput-input textarea,
+.wrappedInput-input input {
+  margin-top: 5px;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.wrappedInput-errors {
+  font-size: 13px;
+  background: #dc3232;
+  color: #fff;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+
+.wrappedInput-errors ul {
+  list-style: none;
+  list-style-type: none !important;
+}
+
+.charLimit {
+  position: relative;
+}
+
+.charLimit-bar {
+  max-width: calc(100% + 34px) !important;
+  width: calc(100% + 34px) !important;
+  height: 2px;
+  background-color: #f5f5f5;
+}
+
+.charLimit-count {
+  position: absolute;
+  right: -34px;
+  background-color: #f5f5f5;
+  color: #fff;
+  padding: 0 5px;
+  font-size: 13px;
+  border-bottom-left-radius: 4px;
+  min-width: 28px;
+  text-align: center;
+}
+
+.charLimit-bar .charLimit-bar-progress {
+  height: 2px;
+  background-color: #ffad1f;
+}

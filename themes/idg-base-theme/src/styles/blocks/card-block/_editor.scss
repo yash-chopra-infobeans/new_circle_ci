@@ -1,0 +1,47 @@
+.card-block .card-content-eyebrow {
+  margin: 0;
+  padding: 0;
+}
+
+.card-block .card-content-eyebrow {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Content style */
+.card-block .card-title-content .card-content {
+  margin: 8px 0 8px 0;
+}
+
+/* delete button */
+.card-block .card-title-content .delete-card-button {
+  display: flex;
+  margin-left: auto;
+  color: #e60000;
+}
+
+/* Add card button */
+.add-card-btn {
+  background: #1e1e1e;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0 !important;
+  min-width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.add-card-btn:hover {
+  background: rgb(65, 64, 64);
+  color: #fafafa;
+}
+
+.add-card-btn .dashicons {
+  margin: auto;
+}
+
+/* set the default title */
+.default-cta-link {
+  color: #3a3a3a;
+}

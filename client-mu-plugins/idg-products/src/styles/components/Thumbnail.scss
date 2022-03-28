@@ -1,0 +1,45 @@
+.productThumbnail-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid $wp-grey-light-800;
+  background-color: $wp-grey-light-100;
+  min-height: 150px;
+  margin-bottom: 10px;
+}
+
+.productThumbnail-media img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+.productThumbnail .productThumbnail-title {
+  margin-bottom: 5px !important;
+  margin-top: 5px;
+}
+
+.productThumbnail-tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productThumbnail-tag {
+  background-color: $wp-grey-light-200;
+  font-size: 11px;
+  font-weight: 400;
+  border-radius: 15px;
+  margin: 2.5px 5px 5px 0;
+  padding: 2.5px 10px;
+}
+
+.productThumbnail-actions {
+  margin-top: 10px;
+}
+
+.select-btn {
+  margin-bottom: 1em;
+}

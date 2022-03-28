@@ -1,0 +1,27 @@
+@import "./settings";
+
+.post-type-product .edit-post-visual-editor__post-title-wrapper {
+  margin: 0 auto;
+  background: #fff;
+  max-width: 600px;
+  padding: 0 30px;
+}
+
+.post-type-product .edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  margin-bottom: 40px;
+}
+
+.post-type-product .editor-post-title .editor-post-title__input {
+  font-family: $font-system-ui;
+  letter-spacing: .5px;
+  font-weight: 300;
+  font-size: 36px;
+  color: $wp-grey-dark-200;
+  padding: 0;
+}
+
+.post-type-product .block-editor-post-preview__dropdown,
+.post-type-product .table-of-contents,
+.post-type-product .block-editor-block-navigation {
+  display: none;
+}

@@ -1,0 +1,25 @@
+@import "./dateRange";
+
+.fieldWithIcon {
+  position: relative;
+}
+
+.fieldWithIcon .dashicon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.fieldWithIcon .components-text-control__input {
+  padding-right: 35px;
+}
+
+.fieldWithIcon.fieldWithIcon--left .components-text-control__input {
+  padding-left: 35px;
+  padding-right: initial;
+}
+
+.fieldWithIcon.fieldWithIcon--left .dashicon {
+  left: 10px;
+}

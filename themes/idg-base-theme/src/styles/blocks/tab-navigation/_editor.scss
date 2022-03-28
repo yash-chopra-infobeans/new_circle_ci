@@ -1,0 +1,162 @@
+/* add link button */
+.wp-block-idg-base-theme-tab-navigation {
+  display: flex;
+}
+
+.add-link-btn {
+  background: #1e1e1e;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0 !important;
+  margin-top: 21px;
+  min-width: 30px;
+  height: 24px;
+  display: inline-block;
+}
+
+.add-link-btn:hover {
+  background: rgb(65, 64, 64);
+  color: #fafafa;
+}
+
+.item-links-wrapper {
+  display: inline-block;
+}
+
+.item-links-wrapper li {
+  margin-left: 0;
+  margin-right: 0 !important;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.move-links-wrapper {
+  text-align: center;
+  justify-content: space-evenly;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.move-link-btn {
+  background: #fff;
+  border: none;
+  color: #1e1e1e;
+  padding: 0 !important;
+  margin: 10px 0px 10px 0px;
+  min-width: 10px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.move-link-btn:hover {
+  background: #fff;
+  color: #2a7da7;
+  cursor: pointer;
+}
+
+.move-links-disabled {
+  background: #fff;
+  border: none;
+  color: #c7c7c7;
+  padding: 0 !important;
+  margin: 10px 0px 10px 0px;
+  min-width: 10px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* nav styles */
+.nav-link {
+  padding: 0 !important;
+  margin-right: 20px;
+  color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  border-bottom: 1px solid var(--single-article--border-color);
+}
+
+.nav-link ul {
+  list-style-type: none;
+}
+
+.nav-link li {
+  display: inline;
+  padding: 10px 0;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.item-link-btn {
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link li.text-link:hover .item-link-btn {
+  border-bottom: 3px solid #4799cb;
+  color: #000;
+  border-radius: 0;
+}
+
+/* delete button */
+.delete-button {
+  color: #e60000 !important;
+  border: none;
+  box-shadow: none;
+  padding: 5px 10px;
+  margin: 5px 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  color: #e60000 !important;
+  border: none;
+  box-shadow: none;
+}
+
+/* make button */
+.make-button button {
+  color: #fff;
+  background-color: #32373c;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.make-button:hover button {
+  color: #fff;
+  background-color: #414040;
+  border: 0;
+}
+
+/* popover title textbox */
+.text-control {
+  width: calc(100% - 32px);
+  padding: 1px 1px 1px 1px;
+  margin: 16px 16px 16px 16px;
+  box-shadow: 0 0 0 none;
+  transition: box-shadow .1s linear;
+}
+
+.text-control > div > input {
+  border: 1px solid #ddd !important;
+  margin-top: 5px;
+  height: 38px;
+}
+
+.text-control > div > input:focus {
+  border: 1px solid var(--wp-admin-theme-color-darker-10) !important;
+}
+
+/* set the default title */
+.default-link {
+  color: #c0c0c0;
+}

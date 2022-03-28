@@ -1,0 +1,490 @@
+{
+  "sections": [
+    {
+      "title": "Articles",
+      "name": "articles"
+    },
+    {
+      "title": "Sponsored Content",
+      "name": "sponsored_content"
+    },
+    {
+      "title": "Amazon API Settings",
+      "name": "amazon_api_settings"
+    },
+    {
+      "title": "Navigation",
+      "name": "navigation"
+    },
+    {
+      "title": "Google Search",
+      "name": "google_search"
+    },
+    {
+      "title": "Footer Content",
+      "name": "footer_content"
+    },
+    {
+      "title": "More From IDG Footer Sites",
+      "name": "more_from_idg"
+    },
+    {
+      "title": "Affiliate Disclaimer",
+      "name": "affiliate_disclaimer"
+    },
+    {
+      "title": "Page Meta Data",
+      "name": "page_meta"
+    },
+    {
+      "title": "Structured data",
+      "name": "structured_data"
+    }
+  ],
+  "field_groups": [
+    {
+      "title": "Reviews",
+      "name": "reviews",
+      "sections": [
+        "articles"
+      ],
+      "fields": [
+        {
+          "title": "Editor's Choice Logo",
+          "key": "editors_choice_logo",
+          "type": "image",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Sponsored content descriptions",
+      "name": "sponsorship_descriptions",
+      "sections": ["sponsored_content"],
+      "fields":  [{
+        "title": "Sponsored post description",
+        "key": "sponsored_post_description",
+        "type": "textarea",
+        "width": 100
+      },
+      {
+        "title": "Sponsored podcast description",
+        "key": "sponsored_podcast_description",
+        "type": "textarea",
+        "width": 100
+      },
+      {
+        "title": "Deal post description",
+        "key": "deal_post_description",
+        "type": "textarea",
+        "width": 100
+      },
+      {
+        "title": "Brand post description",
+        "key": "brand_post_description",
+        "type": "textarea",
+        "width": 100
+      }]
+    },
+    {
+      "title": "Amazon API Settings",
+      "name": "amazon_api_fields",
+      "sections": ["amazon_api_settings"],
+      "fields": [{
+          "title": "Amazon API Origin",
+          "key": "amazon_api_origin",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Amazon Account",
+          "key": "amazon_account",
+          "type": "text",
+          "width": 100
+        },
+        {
+        "singular": "Amazon Tracking ID",
+        "plural": "Amazon Tracking IDs",
+        "key": "amazon_track_ids",
+        "type": "repeater",
+        "panel": {
+          "title_keys": ["territory"]
+        },
+        "fields": [{
+          "title": "Amazon Tracking ID",
+          "key": "track_id",
+          "type": "text",
+          "width": 100,
+          "validation": ["\\Custom_Fields\\Validation_Helpers", "required"]
+        },
+        {
+          "title": "Territory",
+          "key": "territory",
+          "type": "select",
+          "options": [
+            "\\IDG\\Territories\\Helpers",
+            "maybe_get_territory_options_from_origin"
+          ],
+          "width": 100,
+          "validation": ["\\Custom_Fields\\Validation_Helpers", "required"]
+        }]
+      }]
+    },
+    {
+      "title": "Navigation Buttons",
+      "name": "navigation_buttons",
+      "sections": ["navigation"],
+      "fields": [
+        {
+          "title": "Button 1 Text",
+          "key": "button_one_text",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Button 1 Link",
+          "key": "button_one_link",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Button 2 Text",
+          "key": "button_two_text",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Button 2 Link",
+          "key": "button_two_link",
+          "type": "text",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Navigation Social Icons",
+      "name": "navigation_social_icons",
+      "sections": ["navigation"],
+      "fields": [
+        {
+          "title": "Facebook URL",
+          "key": "nav_social_facebook_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Twitter URL",
+          "key": "nav_social_twitter_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "YouTube URL",
+          "key": "nav_social_youtube_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Instagram URL",
+          "key": "nav_social_instagram_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "LinkedIn URL",
+          "key": "nav_social_linkedin_url",
+          "type": "text",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Secondary Navigation Title",
+      "name": "secondary_nav_title",
+      "sections": ["navigation"],
+      "fields": [
+        {
+          "title": "Secondary Navigation Menu Title",
+          "key": "secondary_nav_text",
+          "type": "text",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Google Programmable Search",
+      "name": "google_programmable_search",
+      "sections": ["google_search"],
+      "fields":  [{
+        "title": "Google Programmable Search Title",
+        "key": "title",
+        "type": "text",
+        "width": 100
+      },
+      {
+        "title": "Google Programmable Search Engine ID",
+        "key": "engine_id",
+        "type": "text",
+        "width": 100
+      },
+      {
+        "title": "Google Programmable Search Page Slug",
+        "key": "slug",
+        "type": "text",
+        "width": 100
+      }]
+    },
+    {
+      "title": "Footer Area One",
+      "name": "footer_one",
+      "sections": [
+        "footer_content"
+      ],
+      "fields": [
+        {
+          "title": "Footer Area 1 Title",
+          "key": "footer_area_one_title",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Footer Area 1 Image",
+          "key": "footer_area_one_image",
+          "type": "image",
+          "width": 100
+        },
+        {
+          "title": "Footer Area 1 Content",
+          "key": "footer_area_one_content",
+          "type": "richtext"
+        }
+      ]
+    },
+    {
+      "title": "Footer Area Two",
+      "name": "footer_two",
+      "sections": [
+        "footer_content"
+      ],
+      "fields": [
+        {
+          "title": "Footer Area 2 Title",
+          "key": "footer_area_two_title",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Footer Area 2 Image",
+          "key": "footer_area_two_image",
+          "type": "image",
+          "width": 100
+        },
+        {
+          "title": "Footer Area 2 Content",
+          "key": "footer_area_two_content",
+          "type": "richtext"
+        }
+      ]
+    },
+    {
+      "title": "Footer Social Icons",
+      "name": "footer_social_icons",
+      "sections": [
+        "footer_content"
+      ],
+      "fields": [
+        {
+          "title": "Facebook URL",
+          "key": "footer_social_facebook_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Twitter URL",
+          "key": "footer_social_twitter_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "YouTube URL",
+          "key": "footer_social_youtube_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Instagram URL",
+          "key": "footer_social_instagram_url",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "LinkedIn URL",
+          "key": "footer_social_linkedin_url",
+          "type": "text",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Footer Copyright Text",
+      "name": "copyright_text",
+      "sections": [
+        "footer_content"
+      ],
+      "fields": [
+        {
+          "title": "Footer Copyright Text",
+          "key": "footer_copyright_text",
+          "type": "text",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "More from IDG Site",
+      "name": "more_from_idg",
+      "sections": [
+        "more_from_idg"
+      ],
+      "fields": [
+        {
+          "singular": "Dropdown Site",
+          "plural": "Dropdown Sites",
+          "key": "dropdown_site",
+          "type": "repeater",
+          "panel": {
+            "title_keys": [
+              "title"
+            ]
+          },
+          "fields": [
+            {
+              "title": "Site Title",
+              "key": "title",
+              "type": "text",
+              "width": 100
+            },
+            {
+              "title": "Site URL",
+              "key": "url",
+              "type": "text",
+              "width": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Affiliate Disclaimer",
+      "name": "aff_desc",
+      "sections": [
+        "affiliate_disclaimer"
+      ],
+      "fields": [
+        {
+          "title": "Affiliate Disclaimer Text",
+          "key": "aff_desc_text",
+          "type": "richtext",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "General",
+      "name": "general",
+      "sections": ["page_meta"],
+      "fields": [
+        {
+          "title": "Page Description",
+          "key": "description",
+          "type": "textarea",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Search Engine Identification",
+      "name": "search",
+      "sections": ["page_meta"],
+      "fields": [
+        {
+          "title": "Facebook App ID (fb:app_id)",
+          "key": "fb_app",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Twitter ID (twitter:account_id)",
+          "key": "twitter_id",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Google Site Validation (google-site-validaton)",
+          "key": "google",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Bing Validation (msvalidate.01)",
+          "key": "bing",
+          "type": "text",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Open Graph (non-article)",
+      "name": "og",
+      "sections": ["page_meta"],
+      "fields": [
+        {
+          "title": "Page Title",
+          "key": "title",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Page Description",
+          "key": "description",
+          "type": "textarea",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Twitter Card (non-article)",
+      "name": "twitter",
+      "sections": ["page_meta"],
+      "fields": [
+        {
+          "title": "Page Title",
+          "key": "title",
+          "type": "text",
+          "width": 100
+        },
+        {
+          "title": "Page Description",
+          "key": "description",
+          "type": "textarea",
+          "width": 100
+        }
+      ]
+    },
+    {
+      "title": "Structured data",
+      "name": "struc_data",
+      "sections": [
+        "structured_data"
+      ],
+      "fields": [
+        {
+          "title": "Publisher Logo",
+          "key": "structured_data_publisher_logo",
+          "type": "image",
+          "width": 100
+        }
+      ]
+    }
+  ]
+}

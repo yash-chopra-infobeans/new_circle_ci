@@ -1,0 +1,130 @@
+#nl-wrapper {
+  padding: 20px 40px 0px 40px;
+  margin: 20px 0px;
+  border: 1px solid #ccc;
+}
+
+.nl-signup,
+.nl-signup .email-field {
+  display: flex;
+  position: relative;
+}
+
+.nl-signup .email-wrapper {
+  width: 100%;
+
+  @include mq("mobile") {
+    width: auto;
+  }
+}
+
+.nl-signup .email-field input[type="email"] {
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 10px;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  border-color: #888;
+  border-width: 1px;
+
+  @include mq("mobile") {
+    width: 345px;
+  }
+}
+
+.nl-signup input[type="submit"] {
+  @extend .btn;
+  font-size: 20px;
+  line-height: 1.25rem;
+  font-weight: 700;
+  padding: 10px 24px;
+}
+
+.nl-socialList {
+  list-style: none;
+  display: flex;
+  margin-left: 0;
+}
+
+.nl-socialList li + li {
+  margin-left: 20px;
+}
+
+.nl-socialList li a {
+  display: flex;
+  align-items: center;
+  color: var(--base--font-color);
+}
+
+.nl-socialList li a svg {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+
+  path {
+    fill: var(--social-link-color);
+  }
+}
+
+.newsletter-wrapper {
+  max-width: 792px;
+
+  .entry-title {
+    font-weight: 800;
+  }
+  
+  h2 {
+    padding-top: 40px;
+  }
+  
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .input-description {
+    margin-top: 10px;
+    margin-left: 11px;
+    color: #888;
+  }
+  
+  .wp-block-separator {
+    margin-top: 45px;
+    margin-bottom: 0;
+  }
+
+  ul {
+    font-size: 20px;
+    margin-left: 35px;
+    margin-bottom: 60px;
+
+    li {
+      line-height: 1.5rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  #link_wrapped_content {
+    margin-bottom: 160px;
+  }
+
+  .manage-link {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    margin-left: 0;
+    margin-bottom: 0;
+    color: var(--base--font-color);
+
+    @include mq("mobile") {
+      top: 0;
+
+      a {
+        display: block;
+        margin-top: 6px;
+      }
+    }
+  }
+}

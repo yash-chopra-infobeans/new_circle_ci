@@ -1,0 +1,106 @@
+.cf-field:not(.repeater) {
+  position: relative;
+}
+
+.cf-field {
+  margin: 5px 0;
+}
+
+.cf-field .css-1wm1a55-StyledHelp {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cf-field .components-base-control__label {
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 0px;
+}
+
+.cf-field.has-error .cf-richText,
+.cf-field.has-error input,
+.cf-field.has-error select,
+.cf-field.has-error select:focus,
+.cf-field.has-error input:focus {
+  border-color: $wp-red;
+}
+
+.cf-field.has-error .cf-richText.is-focused,
+.cf-field.has-error input:focus,
+.cf-field.has-error select:focus {
+  box-shadow: 0 0 0 .5px $wp-red;
+}
+
+.cf-field-errorMessage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  font-family: $font-system-ui;
+  color: $wp-red;
+  font-weight: 500;
+}
+
+.cf-field.select .components-select-control__input {
+  max-width: 100%;
+}
+
+.cf-field.toggle {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.cf-field.toggle .components-base-control__label {
+  margin-right: 10px;
+}
+
+.cf-field.toggle .components-base-control__field {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cf-field.repeater .components-card__body {
+  padding: 10px;
+}
+
+.cf-field + .cf-field.repeater {
+  margin-top: 10px;
+}
+
+.cf-field.repeater .components-card,
+.cf-field.repeater .components-panel {
+  margin-bottom: 10px;
+}
+
+.cf-field .components-button.is-small {
+  padding: 0 8px;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  .custom-product-body .cf-footer,
+  .custom-product-body-with-helper .cf-footer {
+    position: absolute;
+    right: 5px;
+    border-top: none;
+  }
+  .custom-product-body .cf-footer {
+    bottom: 22px;
+  }
+  .custom-product-body-with-helper .cf-footer {
+    bottom: 45px;
+  }
+  .custom-product-body-with-helper.components-panel__body,
+  .custom-product-body.components-panel__body {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .custom-product-body .cf-field,
+  .custom-product-body-with-helper .cf-field {
+    flex-basis: 100% !important;
+  }
+}

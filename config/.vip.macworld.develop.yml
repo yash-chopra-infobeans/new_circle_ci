@@ -1,0 +1,3 @@
+data_sync:
+  domain_map:
+    vip.macworld.com: macworld-develop.go-vip.net

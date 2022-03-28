@@ -1,0 +1,25 @@
+blockquote {
+  border-left: 4px solid var(--blockquote--border-color);
+  padding-left: spacing();
+
+  p {
+    color: var(--blockquote--font-color);
+    line-height: var(--blockquote--line-height);
+  }
+}
+
+blockquote cite {
+  position: relative;
+  display: block;
+  padding-left: spacing();
+  font-size: var(--blockquote--citation-font-size);
+  color: var(--blockquote--citation-color);
+  line-height: var(--blockquote--citation-line-height);
+
+  &::before {
+    content: "\2014 \2009";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

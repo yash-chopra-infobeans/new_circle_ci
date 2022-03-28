@@ -1,0 +1,53 @@
+/**
+ * Gutenberg specific styles go here.
+ * Typically can copy from app.scss and then configure from there.
+ */
+
+//
+// Global variables first
+//
+@import "utils/variables/defaults";
+@import "utils/variables/font-sizes";
+
+// Grid settings
+@import "utils/variables/grid-settings";
+
+// Sass Mq
+// @see https://github.com/sass-mq/sass-mq
+@import "sass-mq";
+@import "utils/variables/breakpoints";
+
+.wp-block {
+  max-width: 1420px;
+}
+
+// Components
+@import "editor/components/post-selector";
+@import "editor/components/featured-video";
+@import "components/button/all";
+@import "components/eyebrow/all";
+@import "components/jw-player/all";
+@import "components/jw-player/editor";
+
+// Custom Blocks
+@import "blocks/hero/main";
+@import "blocks/article-list/main";
+@import "blocks/article-list/editor";
+@import "blocks/tab-navigation/main";
+@import "blocks/card-block/main";
+@import "blocks/card-block/editor";
+@import "blocks/layout/main";
+@import "blocks/review/main";
+@import "blocks/review/editor";
+@import "blocks/price-comparison/main";
+@import "blocks/image/main";
+@import "blocks/image/editor";
+@import "blocks/product-chart/editor";
+@import "blocks/product-widget/editor";
+
+// Default Blocks
+@import "blocks/separator/main";
+@import "blocks/table/main";
+
+// Admin and Plugins
+@import "admin/plugins/multi-title";
